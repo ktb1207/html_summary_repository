@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>个人身份认证-葫芦藤</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<style>
+	img:hover {cursor: pointer;}
+	.fileImage {display: none;}
+	.s_dl dl input[type=text],.s_ctip span{font-size: 0.62rem;}
+</style>
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/util/iscroll.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/widget/uploadFile.js"></script>
+<script type="text/javascript" src="../js/custom/certPerson.js"></script>
+<script type="text/javascript" src="../js/util/url.js"></script>
+</head>
+<body>
+<!-- header start-->
+<!-- header end-->
+<!-- con start-->
+<div class="s_report">
+	<!-- 收款人信息 start-->
+	<div class="s_dl s_dl2">
+		<dl>
+			<dt class="lef5">真实姓名：</dt>
+			<dd class="mid">
+				<input id="txt_trueName" data-role="none"  type="text" placeholder="请输入真实姓名" />
+			</dd>
+		</dl>
+		<dl>
+			<dt class="lef5">联系电话：</dt>
+			<dd class="mid">
+				<input id="txt_tele" data-role="none"  type="text" placeholder="请输入联系电话" />
+			</dd>
+		</dl>
+		<dl>
+			<dt class="lef5">身份证号：</dt>
+			<dd class="mid">
+				<input id="txt_IDCard" data-role="none"  type="text" placeholder="请输入身份证号" />
+			</dd>
+		</dl>
+	</div>
+	<!-- 收款人信息 end-->
+	
+	
+	<!-- 组织机构认证照片 start-->
+	<div class="s_per">
+		<p class="s_ctip"><b>身份证手持照片：</b><span>请参考示例图进行拍摄</span></p>
+		<div class="s_car">
+			<img id="img_IDCardHand" src="../image/s_sl1.jpg" />
+			<input type="file" accept="image/jpg,image/jpeg,image/png,image/gif" class="fileImage" id="file_IDCardHand" name="" />
+		</div>
+	</div>
+	<!-- 组织机构认证照片 end-->
+
+	<!-- 组织机构认证照片 start-->
+	<div class="s_per" style="padding-bottom: 0.5rem;">
+		<p class="s_ctip"><b>身份证正反面：</b><span>请参考示例图进行拍摄</span></p>
+		<div class="s_car">
+			<img id="img_IDCardFront" src="../image/s_sl3.jpg" />
+			<input type="file" accept="image/jpg,image/jpeg,image/png,image/gif" class="fileImage" id="file_IDCardFront" name="" />
+			<img id="img_IDCardBack" src="../image/s_sl4.jpg" />
+			<input type="file" accept="image/jpg,image/jpeg,image/png,image/gif" class="fileImage" id="file_IDCardBack" name="" />
+		</div>
+<!-- tip begin-->
+<div id="tip_item" class="l_ban" hidden="true">
+	<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+</div>
+<!-- tip end-->
+
+		<p class="s_ctip"></p>
+	</div>
+	<!-- 组织机构认证照片 end-->	
+</div>
+<!-- con end-->
+
+<!-- btn start-->
+<div class="s_bm">
+	<a id="btn_sbmVerify" class="btn">提交验证</a>
+</div>
+<!-- btn end-->
+</body>
+</html>

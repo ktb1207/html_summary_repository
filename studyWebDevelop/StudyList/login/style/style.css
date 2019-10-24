@@ -1,0 +1,86 @@
+*{margin:0px;
+  padding:0px;
+ }
+ /****************************最外层DIV********************************/
+.wrap{width:600px;
+      height:300px;
+	  margin:100px auto;
+	  background:#ffffff;
+	  }
+/*****************************左侧用户头像区域*****************************/
+.wrap_left{width:200px;
+		   height:300px;
+		   background-image:url(../image/beijing_left.jpg);
+		   background-size:cover;
+		   background-repeat:no-repeat;
+		   float:left;
+		   }
+/******************************右侧登录表单区域*******************************/
+.wrap_right{width:400px;
+		    height:300px;
+			float:left;
+			}
+/*******************************右侧公司名称区域********************************/
+.right_top{width:400px;
+           height:80px;
+		   background:#3333ff;
+		   margin:0 auto;
+		   font-size:32px;
+		   text-align:center;
+		   line-height:80px;
+		   font-weight:bold;
+		   font-family:宋体;
+		   color:#ffffff;
+		   border-bottom:1px solid #000000;
+		   }
+/*********************************form区域************************************/
+.right_center{width:400px;
+			  height:200px;
+			  border-top:1px solid #000000;
+			  background:#3333ff;
+			  }
+/*********************************用户名区域*********************************/
+#center_input1{width:auto;
+			   height:30px;
+			   
+			   margin:40px 0 5px 0px;
+			   line-height:30px;
+			   padding:0 0 0 60px;
+			   }
+#center_input1 input{height:24px;
+					 width:200px;
+					 }
+/********************************密码区域*************************************/
+#center_input2{width:auto;
+			   height:30px;
+			   
+			   margin:5px 0 10px 0px;
+			   line-height:30px;
+			   padding:0 0 0 76px;
+			   }
+#center_input2 input{height:24px;
+					 width:200px;
+					 }
+/********************************记住密码区域************************************/
+#center_input3{width:auto;
+			   height:30px;
+
+			   margin:5px 0 0px 0px;
+			   line-height:30px;
+			   padding:0 0 0 106px;
+			   }
+#center_input3 input{margin:0 0 0 20px;}
+/*********************************登录注册区域*************************************/
+#center_input4{width:auto;
+			   height:30px;
+			   
+			   
+			   line-height:30px;
+			   padding:0 0 0 60px;
+			   }
+#center_input4 input{width:100px;
+					 height:30px;
+					 background:#3333ff;
+					 color:#ffffff;
+					 margin:0 0 0 30px;
+					 }

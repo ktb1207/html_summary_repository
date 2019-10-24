@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>获取两点之间距离</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+		<script src="../js/lib/zepto.js"></script>		
+		<script type="text/javascript"  src="http://api.map.baidu.com/api?v=2.0&ak=QLlZiSoqvoyluejuQiPxtzng"></script>   
+		<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+		<script src="../js/custorm/testDistance.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="dis_wrap">
+			<div class="dis_map" id="allmap">
+				<!--放置百度地图-->
+			</div>
+			<div class="dis_input">
+				<p>请在下面输入配送位置信息:</p>
+				<input type="text" name="address" id="address" value="" placeholder="输入不能为空!"/><br>
+				<span class="dis_sure" id="sure">确定</span>
+				<span class="dis_show"></span>
+			</div>
+		</div>
+	</body>
+</html>

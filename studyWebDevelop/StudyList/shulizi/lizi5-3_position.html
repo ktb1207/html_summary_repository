@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 盒子模型定位练习 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+   *{margin:0;padding:0}
+   .dawai{border-width:2px;border-color:#ff0000;border-style:solid;height:100px;margin:0px 100px;}
+   .liyou{border:2px #66cc00 solid;height:98px;width:200px;margin:0px 0px 0px 958px;}
+   .lizuo{border:2px solid #6600cc;height:98px;width:200px;position:relative;bottom:102px;}
+   /*相对定位的使用，相对于他原始的起点移动*/
+   .lizuoxia{border:2px groove #ff33cc;height:98px;width:200px;}
+   .zuoer{border:2px groove #ff33cc;height:98px;width:200px;position:absolute;left:306px;top:2px;}/*绝对定位，相对于浏览器左上角的0点开始计算*/
+
+  </style>
+ </head>
+
+ <body>
+  <div class="dawai">
+    <div class="liyou">这是里面的盒子</div>
+	<div class="lizuo">使用相对定位，还占有原来空间</div>
+    <div class="lizuoxia">上面的空间区域被占用</div>
+	<div class="zuoer">使用绝对定位，不占有原来空间</div>
+  </div>
+ </body>
+</html>

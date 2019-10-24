@@ -1,0 +1,12 @@
+DOM节点  元素节点 文本节点 属性节点
+node节点三个属性nodeName nodeType nodeValue
+node节点只能获取当前节点的内容
+文本节点并不等于文本内容
+	var box=document.getElementById('box');
+	//alert(box);			//object HTMLDivElement
+	//alert(box.nodeName);	//DIV
+	//alert(box.nodeType);	//1
+	//alert(box.nodeValue);	//null
+层次节点属性
+（1）childNodes   获取当前元素节点的所有子节点
+	

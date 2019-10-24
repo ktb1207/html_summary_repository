@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> String对象使用indexOf方法查找指定字符的位置</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//提示输入信息
+	var yText=prompt("请输入您如要查询的字符串！");
+	//输出用户输入的内容
+	document.write("<h2>您输入的内容为："+yText);
+	//定义一个String对象
+	var sString=new String(yText);
+	if(sString==""){
+		document.write("输入信息不能为空！");
+	}else{
+		var cText=prompt("请输入您需要查询的字符串中的字符");
+		var myString=sString.indexOf(cText)
+		document.write("<h3>您查询的字符在该字符串中的位置为："+myString);
+	}
+
+	
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 纵向列表导航菜单 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+  *{margin:0;                                    /*统一设置页面边距*/
+    padding:0;
+	}
+  body{font-family:Arial;
+       font-size:12px;
+	   color:#000;
+	   }
+  .main{width:990px;                             /*主div*/
+        height:auto;
+		margin:0 auto;
+		background:#ffff99;
+		}
+  .left_box{width:300px;                          /*主div内左侧区域*/
+          
+			padding:10px 20px;
+			}
+  .tittle{color:#ff3300;                          /*标题区域*/
+          font-size:32px;
+		  width:200px;
+		  margin:10px 0;
+		  height:84px;
+		  line-height:84px;
+		  font-weight:bold;
+		 
+		  }
+  .tittle_left{width:100px;                       /*图片区域*/
+               height:84px;
+			   float:left;
+			   }
+  .tittle_right{width:80px;                       /*分类标题区域div*/
+                height:84px;
+				float:left;
+				padding:0 0 0 10px;
+				}
+  ul.list{padding:10px 0 0 20px;                   /*设置列表样式*/
+          }
+  ul.list li{list-style:none;                      /*去掉列表项符号*/
+             padding:4px 0 4px 0;
+			 font-size:24px;
+			 }
+  ul.list li a{text-decoration:none;
+               color:#000;
+			   background:url(images/cc.jpg)no-repeat left;        /*背景图像项目符号*/
+			   padding:0 0 0 40px;
+			   }
+  ul.list li a:hover{text-decoration:underline;                    /*鼠标悬停样式*/
+                     }
+ 	  
+  </style>
+ </head>
+
+ <body>
+ <div class="main">
+   <div class="left_box">
+     <div class="tittle">
+	   <div class="tittle_left"><img src="images/af.jpg"></div>
+	   <div class="tittle_right">分类</div>  
+	 </div>                                               <!-- tittle -->
+	   <ul class="list">
+	     <li> <a href="#">小说</a></li>
+		 <li> <a href="#">文艺</a></li>
+		 <li> <a href="#">青春</a></li>
+		 <li> <a href="#">少儿</a></li>
+		 <li> <a href="#">生活</a></li>
+		 <li> <a href="#">人文</a></li>
+		 <li> <a href="#">管理</a></li>
+		 <li> <a href="#">科技</a></li>
+		 <li> <a href="#">教育</a></li>
+		 <li> <a href="#">社科</a></li>
+		 <li> <a href="#">期刊</a></li>
+	   </ul>
+    </div>                                                <!-- left_box -->
+ </div>                                                   <!-- main -->
+   
+ </body>
+</html>

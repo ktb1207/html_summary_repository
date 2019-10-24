@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>项目详情</title>
+<style type="text/css">
+	div.box h3.tit{height: 2rem; line-height: 2rem;padding: 0 0.5rem;background-color: #FFFFFF;font-size: 0.75rem;font-weight: normal;margin-bottom: 0.65rem;}
+	i.plun{float: right;margin-top: 0.2rem}
+	p.s_wz{line-height: 26px;}
+	div.s_dc p.s_wz span{color: #5E7199;}
+</style>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../js/weixin/jweixin-1.0.0.js" ></script>
+<script data-main="../js/custom/projectDetail.js?2013335" src="../js/lib/require.js-2.1.5.min.js"></script>
+
+</head>
+<body>
+
+<!-- nav start-->
+<ul class="s_nav s_menu">
+	<li id="jump_01"><a><i class="hlt"></i><span>葫芦藤</span></a></li>
+	<li id="jump_02"><a><i class="report"></i><span>举报</span></a></li>
+	<li id="jump_03"><a><i class=" my"></i><span>我的</span></a></li>
+</ul>
+<!-- nav end-->
+<div class="s_main" style="padding-top: 1.45rem;">
+
+<!-- info start-->
+<div class="s_ban">
+	<img id="sCoverPic" src="" width="100%" />
+</div>
+<div class="s_box">
+	<dl class="s_info hide">
+		<dt>
+			<img id="userPic" src="" width="100%" />
+		</dt>
+		<dd>
+			<b id="userName"></b>
+			<p>
+				<time id="creatTime"></time>
+				<span id="proType"></span>
+			</p>
+		</dd>
+	</dl>
+	<!--<ul class="s_num">
+		<li>目标<span id="coin_target">￥2000</span></li>
+		<li>已筹<span id="coin_done">￥2000</span></li>
+		<li>支持<span id="coin_support_count">90次</span></li>
+	</ul>-->
+</div>
+<!-- info end-->
+<!-- 项目认证 start-->
+<!--<div class="s_box">
+	<h3 class="s_tit">项目认证方</h3>
+	<dl class="s_info s_info2">
+		<dt>
+			<img src="../image/pro/pro3.jpg" width="100%" />
+		</dt>
+		<dd>
+			<b>忘忧草</b>
+			<p>
+				除了相片,什么都不要带走;除了脚印,什么都不要留下
+			</p>
+		</dd>
+	</dl>
+</div>-->
+<!-- 项目认证 start-->
+
+<!-- 项目执行地点 start-->
+<!-- 项目详情 start-->
+<div id="proDeta">
+	<!--<div class="s_box s_deta">
+		<dl class="s_info">
+			<dt>
+				<img src="../image/pro/pro3.jpg" width="100%" />
+			</dt>
+			<dd>
+				<b>忘忧草</b>
+				<p>
+					<time>两周前</time>
+				</p>
+			</dd>
+		</dl>
+		<div class="s_dc">
+			<h2 class="s_dtit">
+				<span>剩余10天</span>
+				关注留守儿童
+			</h2>
+			<p class="s_js">轻轻摇晃高脚玻璃杯中的浅玫瑰色液汁，一缕说不准是
+	醇香、果香、清香浓缩而成的葡萄酒特有香气，朴鼻而
+	来沁人肺腑。</p>
+		</div>
+		<ul class="s_pic">
+			<li class="first">
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+			<li>
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+			<li>
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+			<li>
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+		</ul>
+		<ul class="s_num">
+			<li>目标<span>￥2000</span></li>
+			<li>已筹<span>￥2000</span></li>
+			<li>支持<span>90次</span></li>
+		</ul>
+	</div>-->
+</div>
+<!-- 项目详情 start-->
+<!-- 帮Ta实现 start-->
+<!--<div class="s_box">
+	<h3 class="s_tit">帮Ta实现</h3>
+	<div class="s_day s_day2">
+		<h3>
+			<span class="fir"><em>2000</em>元</span>
+			<span class="lst">已筹<b>5000</b>元</span>
+		</h3>
+		<p>除了相片，什么都不要带走；除了脚印，什么都不要留下</p>
+	</div>
+</div>-->
+<!-- 帮Ta实现 end-->
+
+<!-- item start-->
+<!--<div class="s_box s_deta" style="margin-bottom: -0.5rem;">
+	<h3 class="s_tit">项目更新</h3>
+</div>-->
+<!-- 项目周期 start-->
+<div class="s_box">
+	<h3 class="s_tit">项目周期</h3>
+	<div class="s_day" id="nDay">
+		2016-01-30至2016-03-15
+	</div>
+</div>
+<!-- 项目周期 start-->
+<!-- 项目执行地点 start-->
+<div class="s_box">
+	<h3 class="s_tit">项目执行地点</h3>
+	<div class="s_day" id="item_act_address">		
+	</div>
+</div>
+<div id="div_process">
+		<div class="s_box s_deta">
+		<h3 id="h_update" class="s_tit">项目更新</h3>
+	<!-- 		<dl class="s_info">
+				<dt>
+					<img src="../image/pro/pro3.jpg" width="100%" />
+				</dt>
+				<dd>
+					<b>忘忧草</b>
+						
+					<p class="s_opr">
+						<time>两周前</time>
+						<i class="plun i_process_master" data-userId='1' data-dynamicId="1"></i>
+					</p>
+				</dd>
+			</dl>
+			<div class="s_dc">
+				<p class="s_js">轻轻摇晃高脚玻璃杯中的浅玫瑰色液汁，一缕说不准是
+					醇香、果香、清香浓缩而成的葡萄酒特有香气，朴鼻而
+					来沁人肺腑。轻轻摇晃高脚玻璃杯中的浅玫瑰色液汁，一缕说不准是
+					醇香、果香、清香浓缩而成的葡萄酒特有香气，朴鼻而
+					来沁人肺腑。</p>
+			</div>
+			<ul class="s_pic">
+				<li class="first">
+					<a><img src="../image/pro/pro4.jpg" /></a>
+				</li>
+				<li>
+					<a><img src="../image/pro/pro4.jpg" /></a>
+				</li>
+				<li>
+					<a><img src="../image/pro/pro4.jpg" /></a>
+				</li>
+				<li>
+					<a><img src="../image/pro/pro4.jpg" /></a>
+				</li>
+			</ul>
+			<div class="s_dc">
+				<p class="s_wz"><span class='spn_process_branch'>斑马：</span>葡萄酒也是需要理解的</p>
+				<p class="s_wz"><span>斑马：</span>葡萄酒也是需要理解的</p>
+			</div>
+			 -->
+		</div>
+		<!-- item end-->
+</div>
+
+
+
+<!-- 评论 start-->
+<div id="div_pay_comment" class="s_pm">
+<div class="s_ping">
+	<!-- <dl>
+		<dt>
+			<img src="../image/pro/pro3.jpg" width="100%" />
+		</dt>
+		<dd>
+			<div class="pt">
+				<h3 class="s_ptit">
+					<a>哈哈</a>
+					<span>支持了<b>10元</b></span>
+				</h3>
+				<p class="s_zw">加油、加油、加油...</p>
+				<div class="s_opr">
+					<time>5周前</time>
+					<i class="plun i_master" data-userId='1' data-dynamicId=""></i>
+				</div>
+			</div>
+			<div class="s_hf">
+				<a class="a_branch" data-userId='2' data-dynamicId="">乐乐：</a>
+				嗯嗯，大家一起加油...
+			</div>
+			<div class="s_hf">
+				<a class="a_branch" data-userId='2' data-dynamicId="">乐乐：</a>
+				嗯嗯，大家一起加油...
+			</div>
+		</dd>
+	</dl>
+	
+	<dl>
+		<dt>
+			<img src="../image/pro/pro3.jpg" width="100%" />
+		</dt>
+		<dd>
+			<div class="pt">
+				<h3 class="s_ptit">
+					<a>哈哈</a>
+					<span>支持了<b>10元</b></span>
+				</h3>
+				<p class="s_zw">加油、加油、加油...</p>
+				<div class="s_opr">
+					<time>5周前</time>
+					<i class="plun"></i>
+				</div>
+			</div>
+			<div class="s_hf">
+				<a>乐乐：</a>
+				嗯嗯，大家一起加油...
+			</div>
+		</dd>
+	</dl> -->
+</div>
+</div>
+<!-- 评论 end-->
+
+</div>
+
+<!-- btn start-->
+<div class="s_pfix">
+	<div class="lef" id="div_follow">
+		<i class="see"></i>
+		<!--Lu-->
+		<p></p>
+	</div>
+	<div id="do_ido" class="mid">
+		<a class="s_pbtn">我要捐助</a>
+	</div>
+	<div class="rig">
+		<i class="sha"></i>
+		<p>分享</p>
+	</div>
+</div>
+<!-- btn end-->
+
+<!-- messagebox start-->
+<div class="pop pop2 hide">
+	<div id="Dialog1" class="dialog" data-dynamicId="" data-dynamicTypeId="" data-isMaster="" data-byReviewers="">
+		<a class="d-close"><i></i></a>
+		<h3>发表回复</h3>
+		<div class="d-ipu">
+			<textarea id="txtr_comment" data-role="none" placeholder="我也说一句..."></textarea>
+		</div>
+		<div class="d-btn">
+			<a id="a_comment_cancel">取消</a>
+			<a id="a_comment_ok">写好了</a>
+		</div>
+	</div>
+</div>
+<!-- messagebox end-->
+</body>
+</html>

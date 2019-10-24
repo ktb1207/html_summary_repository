@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 结合Math对象的random随机返回数组中的一个元素 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义一个函数
+	function myfunction(num1,num2){
+		var nNumber=num2-num1+1;
+		//取得随机数返回
+		return Math.floor(Math.random()*nNumber+num1);
+	}
+  </script>
+ </head>
+
+ <body>
+   <script language="javascript" type="text/javascript">
+	//创建数组并赋值
+	var myArray=new Array("星期日","星期一","星期二","星期三",
+					"星期四","星期五","星期六");
+	//调用函数
+	var index=myfunction(0,myArray.length-1);
+	//获得随机元素
+	var myday=myArray[index];
+	//在网页中显示
+	document.write("<h3>在网页中获取的随机元素为："+myday);
+
+
+  </script>
+ </body>
+
+</html>

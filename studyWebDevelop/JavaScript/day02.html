@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 标签跳转结构语句 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+   var i;
+   var j;
+   mylabel1:               //定义外层循环标签名称
+   for(i=1;i<=5;i++)
+   {
+     mylabel2:             //定义内层循环标签名称
+	 for(j=1;j<=4;j++)
+	 {
+	   if(j==3)
+	   {
+	     continue mylabel2;
+	   }
+	   if(i==3)
+	   {
+	     break mylabel1;
+	   }
+	   document.write("i的值为："+i+"");
+	   document.write("j的值为："+j+"<br>");
+	 }
+   }
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

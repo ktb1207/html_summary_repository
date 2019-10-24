@@ -1,0 +1,128 @@
+body{
+	margin:40px 0 0 0;
+	padding:0;
+	font-size:13px;
+	font-family:宋体;
+	background:#ffffff;
+
+}
+/**********************************导航区样式********************************/
+#header{
+	width:100%;
+	height:40px;
+	background:#d4d4d4;
+	position:absolute;
+	top:0;
+
+}
+#header .header_main{
+	width:800px;
+	height:40px;
+	margin:0 auto;
+}
+#header .header_main h1{
+	font-size:20px;
+	margin:0;
+	padding:0;
+	color:#666;
+	height:40px;
+	line-height:40px;
+	float:left;
+	padding:0 10px;
+}
+#header .header_search{
+	float:left;
+	padding:6px 0 0 0;
+}
+#header .header_search .search{
+	width:300px;
+	height:24px;
+	border:1px solid #ccc;
+	background:#fff;
+	color:#666;
+	font-size:14px;
+	text-indent:5px;
+}
+#header .header_button{
+	padding:4px;
+	float:left;
+}
+/*************修改查询按钮样式****************/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	background:#d9d9d9;
+	color:#666;
+}
+#header .header_member{
+	float:right;
+	height:40px;
+	line-height:40px;
+	color:#555;
+	font-size:14px;
+}
+#header .header_member a{
+	text-decoration:none;
+	color:#555;
+}
+/***************************注册/登录表单区**********************************/
+#reg{
+	display:none;
+	padding:15px 0 0 15px;
+}
+#reg .text{
+	border-radius:4px;
+	border:1px solid #ccc;
+	background:#fff;
+	width:200px;
+	height:25px;
+	color:#666;
+	line-height:25px;
+	text-indent:5px;
+}
+#reg p{
+	margin:10px 0;
+	padding:0;
+}
+#reg p label{
+	font-size:16px;
+	color:#666;
+}
+#reg .star{
+	color:red;
+	font-size:20px;
+}
+
+
+#login{
+	display:none;
+}
+/****************************修改注册/登录表单样式*********************************/
+.ui-widget-content{
+	background:#d9d9d9;
+	color:#666;
+}
+.ui-dialog-titlebar .ui-widget-header .ui-corner-all .ui-helper-clearfix .ui-draggable-handle{
+	background:#d9d9d9;
+	color:#666;	
+}
+.ui-dialog .ui-dialog-title{
+	background:#d9d9d9;
+	color:#666;	
+	font-size:16px;
+}
+/******************************修改提示工具样式**************************************/
+.ui-tooltip{
+	color:red;
+}
+/*******************************修改日历当天样式*****************************/
+ .ui-datepicker-today .ui-state-highlight{
+	background:#ff9900;
+	color:#000000;
+ }
+.ui-datepicker-current-day .ui-state-active{
+	background:#3333ff;
+	color:#000000; 
+}
+
+
+
+

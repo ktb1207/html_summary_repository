@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 列表对象添加和删除 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义添加列表对象函数
+	function myFunction1(){
+		//定义新选项
+		var newOption=new Option("添加的新选项","新选项");
+		//添加到列表
+		document.myForm1.select1.add(newOption);
+	}
+	//定义删除列表对象函数
+	function myFunction2(){
+		//删除指定位置列表对象
+		document.myForm1.select1.remove(0);
+	}
+  </script>
+ </head>
+
+ <body>
+	<h2>通过单击“添加对象”按钮和“删除对象”按钮来操作列表对象内容</h2>
+	<hr size="2" color="#808080">
+	<form name="myForm1" action="" method="post">
+		<select size="4" name="select1">
+			<option>我不后悔</option>
+			<option>一万个理由</option>
+			<option>爱上别人的人</option>
+			<option>包容</option>
+			<option>当我孤独的时候还可以抱着你</option>
+			<option>当爱失去了默契</option>
+		</select>
+	</form>
+	<br>
+	<form name="myForm2" action="" method="post">
+		<input type="button" value="添加对象" onclick="myFunction1()">
+		<input type="button" value="删除对象" onclick="myFunction2()">
+	</form>
+ </body>
+</html>

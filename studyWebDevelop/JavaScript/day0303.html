@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>NAN和isNAN函数的使用 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+   <h2>使用NAN和isNAN函数进行本地验证</h2>
+ </body>
+ <script language="javascript" type="text/javascript">
+   var nNumber=prompt("请输入您的年龄","")       //定义提示对话框
+   if(isNaN(nNumber))
+   {
+     document.write("<h2>您输入年龄格式错误，请输入数字类型");
+   }
+   else
+   {
+     document.write("<h2>您输入的年龄格式正确，恭喜您注册通过!");
+   }
+ 
+ </script>
+</html>

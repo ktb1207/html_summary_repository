@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 网批商城 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content=""> 
+  <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+  <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="js/indexjs.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="image/fav.ico">
+  <link rel="stylesheet" type="text/css" href="style/indexstyle.css">
+  <link rel="stylesheet" type="text/css" href="style/zcaidan.css">
+ </head>
+<!-- background:#ffff00-->
+ <body>
+	<div class="header" id="top">
+		<div id="left_bar">
+			<p><img src="image/bar.png" height="20" width="25" align="center">
+				<a href="#">保存到桌面</a>
+				<span id="left_span">欢迎来到网批网！</span>
+			</p>
+			<ul>
+				<li>[<a href="#" class="bar">登录</a>]</li>
+				<li>[<a href="#" class="bar">免费注册</a>]</li>
+			</ul>
+		</div>
+		<div id="right_bar">
+			<ul>
+				<li class="awp"><a href="#">我的网批</a><img src="image/xia.png" width="12" height="12" id="img1">
+					<div id="wp">
+					<ul>
+						<li><a href="#">我的订单</a></li>
+						<li><a href="#">站内信</a></li>
+					</ul>
+					</div>
+					
+				</li>
+				<li class="asc"><a href="#">收藏夹</a><img src="image/xia.png" width="12" height="12" id="img2">
+					<div id="sc">
+					<ul>
+						<li><a href="#">收藏的商品</a></li>
+						<li><a href="#">收藏的店铺</a></li>
+					</ul>	
+					</div>		
+				</li>
+					
+				<li class="agh"><a href="#">供货商中心</a><img src="image/xia.png" width="12" height="12"  id="img3">
+					<div id="gh">
+					<ul>
+						<li><a href="#">已售出的商品</a></li>
+						<li><a href="#">出售中的商品</a></li>
+					</ul>	
+					</div>
+					
+				</li>
+				<li><a href="#">我的购物车</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">帮助中心</a></li>
+			</ul>
+		</div>
+	</div> <!-- header -->
+	<div class="content" >
+		<div class="content_top">
+			<div id="top_left1"></div>
+			<div id="top_left2"></div>
+			<div id="top_center">
+				<form name="form1" method="post" action="">
+					<input type="text" value="请输入关键词" id="text1">
+					<input type="submit" value="搜索" id="submit1">
+				</form>	
+			</div>
+			<div id="top_right1"></div>
+			<div id="top_right2"></div>
+		</div> <!-- content_top -->
+		<div class="content_min">
+			<div id="min_left">
+				<a href="#">所有商品分类</a>
+			</div>
+			<div id="min_right">
+				<ul>
+				<li><a href="#">天天特价</a></li>
+				<li><a href="#">金币商城</a></li>
+				<li><a href="#">配送城</a></li>
+				</ul>
+			</div>
+		</div>  <!-- content_min -->
+		<div class="content_lunbo">
+			<div id="daohang">
+				<div id="daohang_left">
+					<div id="aa"> <!-- 第一个菜单 -->
+						<a href="#">服装内衣</a> <br>
+						<a href="#">品味男装</a>&nbsp&nbsp<a href="#">时尚女装</a>
+						<div id="aaz">
+							<div class="zleft_top">
+								<div class="cur">品味男装</div>
+								<div id="zaa">
+									<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">针织衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">牛仔裤</a>&nbsp&nbsp<a href="#">休闲裤</a>
+								</div>
+								</div>
+							<div class="zright_top">
+								<div class="cur">时尚女装</div>
+								<div id="zaa">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zleft_bot">
+								<div class="cur">中老年装</div>
+								<div id="zaa">
+									<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">裤子</a>&nbsp&nbsp<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">中老年外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zright_bot">
+								<div class="cur">推荐品牌</div>
+									<div id="zaa">
+										<a href="#">ONLY</a>&nbsp&nbsp<a href="#">与狼共舞</a>&nbsp&nbsp<a href="#">veromoda</a>&nbsp&nbsp<a href="#">GXG</a>&nbsp&nbsp<a href="#">依恋</a>&nbsp&nbsp<a href="#">七匹狼</a>&nbsp&nbsp<a href="#">伊芙丽</a>&nbsp&nbsp<a href="#">雅戈尔</a>&nbsp&nbsp<a href="#">歌莉娅</a>&nbsp&nbsp<a href="#">JackJones</a>
+									</div>
+							</div>
+						</div>
+					</div> 
+					<div id="bb"> <!-- 第二个菜单 -->
+						<a href="#">鞋帽箱包</a> <br>
+						<a href="#">时尚男鞋</a>&nbsp&nbsp<a href="#">流行女鞋</a>
+						<div id="bbz">
+							
+								<div class="zleft_top">
+								<div class="cur">时尚男鞋</div>
+								<div id="zbb">
+									<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">针织衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">牛仔裤</a>&nbsp&nbsp<a href="#">休闲裤</a>
+								</div>
+							
+							</div>
+							<div class="zright_top">
+								<div class="cur">流行女鞋</div>
+								<div id="zbb">
+									<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">针织衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">牛仔裤</a>&nbsp&nbsp<a href="#">休闲裤</a>
+								</div>
+							</div>
+							<div class="zleft_bot">
+								<div class="cur">箱包皮具</div>
+								<div id="zbb">
+									<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">针织衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">牛仔裤</a>&nbsp&nbsp<a href="#">休闲裤</a>
+								</div>
+							</div>
+							<div class="zright_bot">
+								<div class="cur">推荐品牌</div>
+								<div id="zbb">
+									<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">针织衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">牛仔裤</a>&nbsp&nbsp<a href="#">休闲裤</a>
+								</div>
+							</div>
+						</div>
+					</div> 
+					<div id="cc"> <!-- 第三个菜单 -->
+						<a href="#">护肤美妆</a><br>
+						<a href="#">时尚彩妆</a>&nbsp&nbsp<a href="#">美容工具</a>
+						<div id="ccz">
+							<div class="zleft_top">
+								<div class="cur">时尚彩妆</div>
+								<div id="zcc">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zright_top">
+								<div class="cur">美容工具</div>
+								<div id="zcc">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zleft_bot">
+								<div class="cur">美容护肤</div>
+								<div id="zcc">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zright_bot">
+								<div class="cur">推荐品牌</div>
+								<div id="zcc">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+						</div>
+					</div> 
+					<div id="dd"> <!-- 第四个菜单 -->
+						<a href="#">美食特产</a><br>
+						<a href="#">零食特产</a>&nbsp&nbsp<a href="#">中外美酒</a>
+						<div id="ddz">
+							<div class="zleft_top">
+								<div class="cur">零食特产</div>
+								<div id="zdd">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zright_top">
+								<div class="cur">中外美酒</div>
+								<div id="zdd">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zleft_bot">
+								
+							</div>
+							<div class="zright_bot">
+								<div class="cur">健康饮品</div>
+								<div id="zdd">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="ee"> <!-- 第五个菜单 -->
+						<a href="#">饰品配件</a><br>
+						<a href="#">时尚饰品</a>&nbsp&nbsp<a href="#">流行配件</a>
+						<div id="eez">
+							<div class="zleft_top">
+								<div class="cur">流行饰品</div>
+								<div id="zee">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zright_top">
+								<div class="cur">时尚配件</div>
+								<div id="zee">
+									<a href="#">连衣裙</a>&nbsp&nbsp<a href="#">T恤</a>&nbsp&nbsp<a href="#">衬衫</a>&nbsp&nbsp<a href="#">卫衣</a>&nbsp&nbsp<a href="#">薄外套</a>&nbsp&nbsp<a href="#">裤子</a>
+								</div>
+							</div>
+							<div class="zleft_bot">	
+							</div>
+							<div class="zright_bot">	
+							</div>
+						</div>
+					</div>
+					<div id="ff"> <!-- 第六个菜单 -->
+						<a href="#">家纺装饰</a><br>
+						<a href="#">床品套件</a>&nbsp&nbsp<a href="#">居家布艺</a>
+						<div id="ffz">
+							<div class="zleft_top"></div>
+							<div class="zright_top"></div>
+							<div class="zleft_bot"></div>
+							<div class="zright_bot"></div>
+						</div>
+					</div> 
+					<div id="gg"> <!-- 第七个菜单 -->
+						<a href="#">日用百货</a>
+						<a href="#">厨房用品</a>&nbsp&nbsp<a href="#">洗护清洁</a>
+						<div id="ggz">
+							<div class="zleft_top"></div>
+							<div class="zright_top"></div>
+							<div class="zleft_bot"></div>
+							<div class="zright_bot"></div>
+						</div>
+					</div> 
+					<div id="hh"> <!-- 第八个菜单 -->
+						<a href="#">手机数码</a>
+						<a href="#">手机频道</a>&nbsp&nbsp<a href="#">摄影摄像</a>
+						<div id="hhz">
+							<div class="zleft_top"></div>
+							<div class="zright_top"></div>
+							<div class="zleft_bot"></div>
+							<div class="zright_bot"></div>
+						</div>
+					</div> 
+					<div id="kk"> <!-- 第九个菜单 -->
+						<a href="#">家用电器</a><br>
+						<a href="#">大家电</a>&nbsp&nbsp<a href="#">生活电器</a>
+						<div id="kkz">
+							<div class="zleft_top"></div>
+							<div class="zright_top"></div>
+							<div class="zleft_bot"></div>
+							<div class="zright_bot"></div>
+						</div>
+					</div> 
+					<div id="mm"> <!-- 第十个菜单 -->
+						<a href="#">电脑办公</a><br>
+						<a href="#">台式机</a>&nbsp&nbsp<a href="#">笔记本</a>
+						<div id="mmz">
+							<div class="zleft_top">
+								
+							</div>
+							<div class="zright_top"></div>
+							<div class="zleft_bot"></div>
+							<div class="zright_bot"></div>
+						</div>
+					</div> 
+				</div>
+			</div> <!-- daohang -->
+			<div id="lunbo">
+				<a href="#">
+					<img src="image/lunbo1.jpg" height="500" width="800" alt="5.0折起">
+				</a>
+				<div id="nav">  <!-- 背景滚动条 -->
+					<div id="lunbo1">5.0折起</div>
+					<div id="lunbo2">败家出清</div>
+					<div id="lunbo3">家居日用</div>
+					<div id="lunbo4">天天3元起</div>
+					<div id="lunbo5">开学那点食儿</div>
+				</div>
+			</div> <!-- lunbo -->
+		</div> <!-- content_lunbo -->
+		<div class="rightlogo">
+			<img src="image/rightlogo.jpg" width="160" height="500">
+		</div>
+	</div> <!-- content -->
+	<div id="photo">
+		<div class="photo_1f" >
+			<div class="atittle" id="af">1F旅游景点</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo1/1f1.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo1/1f2.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo1/1f3.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo1/1f4.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo1/1f5.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo1/1f6.jpg" width="320" height="240">
+				</a>
+			</div>
+		</div>
+		<div class="photo_1f">
+			<div class="atittle" id="bf">2F名车鉴赏</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo2/2f1.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo2/2f2.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo2/2f3.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo2/2f4.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo2/2f5.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo2/2f6.jpg" width="320" height="240">
+				</a>
+			</div>
+		</div>
+		<div class="photo_1f" >
+			<div class="atittle" id="cf">3F文化名城</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo3/3f1.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo3/3f2.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo3/3f3.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo3/3f4.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo3/3f5.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo3/3f6.jpg" width="320" height="240">
+				</a>
+			</div>
+		</div>
+		<div class="photo_1f" >
+			<div class="atittle" id="df">4F古玩收藏</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo4/4f1.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo4/4f2.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo4/4f3.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo4/4f4.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo4/4f5.jpg" width="320" height="240">
+				</a>
+			</div>
+			<div class="aimage">
+				<a href="#">
+					<img src="image/grey.gif" data-original="image/photo4/4f6.jpg" width="320" height="240">
+				</a>
+			</div>
+		</div>
+	</div> <!-- photo -->
+	<div id="right_nav">
+		<ul>
+			<li><a href="#af">1F</a></li>
+			<li><a href="#bf">2F</a></li>
+			<li><a href="#cf">3F</a></li>
+			<li><a href="#df">4F</a></li>
+			<li><a href="#top">TOP</a></li>
+		</ul>
+	</div>
+ </body>
+</html> <!-- background:#ff3333-->

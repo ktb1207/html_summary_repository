@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>splice方法删除指定数量的数组元素 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义一个数组
+	var myArray=new Array(7);
+	myArray[0]="a";
+	myArray[1]="b";
+	myArray[2]="c";
+	myArray[3]="d";
+	myArray[4]="e";
+	myArray[5]="f";
+	myArray[6]="g";
+	//显示数组元素
+	document.write("<h3>原数组元素为："+myArray);
+	//使用splice方法删除指定数组元素
+	var newArray=myArray.splice(1,2);
+	document.write("<h3>删除后的数组元素为："+myArray);
+	document.write("<h3>删除的数组元素为："+newArray);
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

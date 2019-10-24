@@ -1,0 +1,40 @@
+p.aa{
+	font-size:32px;
+	line-height:20px;
+	color:blueviolet;
+	text-shadow:-0.1rem -0.1rem #333;
+}
+p.ab{
+	font-size:36px;
+	line-height:20px;
+	color:coral;
+	text-align:center;
+	text-shadow:-0.1rem 0.1rem #333;
+				
+}
+p.ac{
+	font-size:18px;
+	line-height:20px;
+	color:black;
+	text-shadow:0.1rem -0.1rem #FF0000;
+}
+p.ad{
+	font-size:42px;
+	line-height:20px;
+	color:red;
+	text-align:center;
+	text-shadow:0.1rem 0.1rem 0.2rem #000;
+}
+.ae{
+	font-size:1.2rem;
+	text-align:left;
+	color:orange;
+	width:20rem;
+	height:3rem;
+	line-height:2rem;
+	overflow:hidden;
+	text-wrap:none;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	
+}

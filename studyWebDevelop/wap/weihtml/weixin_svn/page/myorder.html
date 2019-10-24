@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>我的订单</title>
+    <link type="text/css" rel="stylesheet" href="../css/wx.css"/>
+    <script src="../js/lib/zepto.js"></script>
+    <script src="../js/lib/iscroll.js"></script>
+    <script src="../js/method/base.js"></script>
+</head>
+<body>
+<h1 class="h1_wx01">我的订单</h1>
+<a href="index.html" class="wx_fh"><img src="../images/wx_leftbtn01.png" /></a>
+<section  id="wrapper" getpage = "true">
+    <section id="scroller">
+        <div id = "scroller-pullDown">
+            <span id = "down-icon" class = "icon-double-angle-down pull-down-icon"></span>
+            <span id = "pullDown-msg" class = "pull-down-msg">下拉刷新</span>
+        </div>
+        
+        
+        <section id = "scroller-content"></section>
+        
+        
+        <div id = "scroller-pullUp">
+            <span id = "up-icon" class = "icon-double-angle-up pull-up-icon"></span>
+            <span id = "pullUp-msg" class = "pull-up-msg">上拉刷新</span>
+        </div>
+    </section>
+</section>
+<script>
+    $(function(){
+        $(window).load(function() {
+            getNewData();
+        });
+        //下拉刷新上拉加载部分
+        function getNewData(){
+            var myScroll;
+            myScroll = new IScroll('#wrapper', { probeType: 3, mouseWheel: true });
+            var pageNumber = 1;
+            myScroll.on("slideDown",function(){
+                if(this.y > 40){
+                    location.reload();
+                    pageNumber = 1;
+                    myScroll.refresh();
+                }
+            });
+            myScroll.on("slideUp",function(){
+                if(this.maxScrollY - this.y > 40){
+                    if($('#wrapper').attr('getpage')=='true'){
+                        pageNumber++;
+                        console.log(pageNumber);
+                        getMyorder(pageNumber);
+                        myScroll.refresh();
+                    }
+                    else{
+                        $('.pull-up-msg').text('已无更多数据');
+                    }
+                }
+            });
+        }
+        var dataurl = 'http://103.8.220.166:40000/saywashnew/WashCallApi';
+        var TokenId = localStorage.getItem("tokenId");
+
+        getMyorder(1);
+        //获取数据
+        function getMyorder(pageNumber){
+            $.ajax({
+                type:"GET",
+                url:''+dataurl+'/api/order/getUserOrderList.api',
+                data:{"pageNumber":pageNumber,"orderType":'',"tokenId":TokenId,"ssid":getTime()},
+                dataType:"jsonp",
+                jsonp:"outAccess",
+                success:function(data){
+                    console.log(data);
+                    if(data.retCode == 10005){
+                        $('#wrapper').attr('getpage','getNone');
+                        //数据不存在
+                    }
+                    if(data.retCode == 10001){
+                        //重新登录
+                    }
+                    if(data.retCode == 00000){
+                        var dataLength = data.data.length;
+                        var myOrder = '';
+                        var myOrderNum = '';
+                        var orderStatus = '';
+                        for(var i=0;i<dataLength;i++){
+                            if(i<9 && pageNumber==1){myOrderNum = 0+''+(i+1);}
+                            else{myOrderNum = (i+1)+(pageNumber-1)*10;}
+                            if(data.data[i].orderStatus==101){orderStatus = '预约中'}
+                            else if(data.data[i].orderStatus==102){orderStatus = '预定待验证'}
+                            else if(data.data[i].orderStatus==103){orderStatus = '已支付'}
+                            else if(data.data[i].orderStatus==104){orderStatus = '订单完成'}
+                            else if(data.data[i].orderStatus==105){orderStatus = '订单取消'}
+                            else if(data.data[i].orderStatus==105){orderStatus = '订单取消'}
+                            else if(data.data[i].orderStatus==106){orderStatus = '超时未支付'}
+                            else if(data.data[i].orderStatus==107){orderStatus = '故障关闭'}
+                            else if(data.data[i].orderStatus==108){orderStatus = '超时已支付'}
+                            else if(data.data[i].orderStatus==109){orderStatus = '验证待支付'}
+                            else if(data.data[i].orderStatus==110){orderStatus = '故障已支付'}
+                            else if(data.data[i].orderStatus==111){orderStatus = '清洁中'}
+                            else if(data.data[i].orderStatus==112){orderStatus = '烘干待延长'}
+                            myOrder +='<section class="myorder_box"><p class="myorder_p01">'+myOrderNum+'</p><div class="myorder_div01"><p class="myorder_p02 myorder_porder">订单号:'+data.data[i].orderCode+'</p><p class="myorder_p02 myorder_pmachine">'+data.data[i].deviceInfo.name+'</p><p class="myorder_p02"><span class="myorder_s01">￥'+data.data[i].price+'</span><span class="myorder_s02">'+orderStatus+'</span></p></div><p class="myorder_p03"><img src="../images/wx_rightbtn02.png" /></p></section>';
+                        }
+                        $('#scroller-content').append(myOrder);
+                    }
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

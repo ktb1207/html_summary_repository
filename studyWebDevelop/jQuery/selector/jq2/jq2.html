@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>jQuery基本选择器selector</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+	.astyle{
+		font-size:28px;
+		color:red;
+	}
+	.bstyle{
+		font-size:40px;
+		color:orangered;
+		text-decoration:none;
+	}
+  </style>
+  <script type="text/javascript" src="jquery-1.12.0.js"></script>
+  <script>
+	//文档就绪函数
+	$(function(){
+		//在页面加载完成后执行里面的语句
+
+		//AllSelector('*'),*代表的是所有选择器
+		//css函数的含义是为选中的对象指定css属性
+			//jQuery("*").css("border","1px solid red");
+
+		//ClassSelector('.class')
+		//类选择器，使用的方法是$(".类名")或者是jQuery(".类名")
+			//$(".astyle").css("border","1px solid red");
+
+		//ElementSelector("element")
+		//元素选择器使用方法是$("标签名")或者jQuery("标签名")
+			//$("div").css("border","1px solid red");
+
+		//IDSelector("id")
+		//id选择器，使用方法是$("#id")或者jQuery("#id")
+		//$("#id")=document.getElementById()
+			//$("#li3").css("border","1px solid red");
+
+		//组合选择器MultipleSelector("","","",)
+		//组合选择器，是将多个选择的结果进行组合，使用方法是：
+		//$("selector1,selector2,selector3,...selectorn")
+			//$("#li3,#a9,.astyle").css("border","1px solid red");
+	});
+  </script>
+ </head>
+
+ <body>
+	<div>
+		<ul>
+			<li>1.<a href="#">超链接1</a></li>
+			<li>2.<a href="#">超链接2</a></li>
+			<li id="li3">3.<a href="#">超链接3</a></li>
+			<li>4.<a href="#" class="astyle">超链接4</a></li>
+			<li>5.<a href="#">超链接5</a></li>
+			<li>6.<a href="#">超链接6</a></li>
+			<li>7.<a href="#" class="astyle">超链接7</a></li>
+			<li>8.<a href="#">超链接8</a></li>
+			<li id="a9">9.<a href="#">超链接9</a></li>
+			<li>10.<a href="#" class="bstyle">超链接10</a></li>
+		</ul>
+	</div>
+ </body>
+</html>

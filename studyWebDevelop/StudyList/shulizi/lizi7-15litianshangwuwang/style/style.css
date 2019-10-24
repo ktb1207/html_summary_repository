@@ -1,0 +1,253 @@
+*{margin:0;                                     /*页面边距统一设置*/
+  padding:0;
+  }
+  /*********************main****************************/
+.main{width:1200px;                             /*主div*/
+      height:auto;
+	  margin:0 auto;
+	  }
+/************************top********************************************/
+.top{width:1200px;                              /*页面顶部标题、导航区域*/
+     height:60px;
+	 background:#669900;
+	 }
+#top_left{width:300px;                          /*顶部标题区域*/
+          height:60px;
+		 
+		  float:left;
+          margin:0 0 0 100px;
+		  font-size:32px;
+		  font-weight:bold;
+		  text-align:center;
+		  line-height:60px;
+		  }
+#t1{font-size:14px;                              /*顶部标题字体样式*/
+    font-weight:none;
+	}
+#top_right{width:500px;                          /*顶部导航区域*/
+          height:60px;
+		  
+		  float:right;
+		  }
+#top_right ul{list-style:none;                   /*导航列表样式设置开始*/
+              }
+#top_right li{width:80px;
+              height:60px;
+			  float:left;
+			  line-height:60px;
+			  text-align:center;
+
+			  }
+#top_right li a:link,#top_right li a:visited{
+              font-size:20px;
+			  font-weight:none;
+			  color:#000000;
+			  text-decoration:none;
+			  }
+#top_right li a:hover{background:#ff0000;
+                      color:#ffffff;
+					  display:block;
+					  text-decoration:underline;
+					  }                             /*导航列表样式设置结束*/  
+/*******************************logo******************************************************/
+.logo{width:1200px;                                 /*logo图标区域*/
+      height:120px;
+	  background:#669900;
+	  }	
+#logo_left{width:400px;                             /*logo左侧区域*/
+           height:118px;
+		   background:#0033ff;
+		   float:left;
+		   margin:0 0 0 20px;
+		   border:1px solid #000000;
+		   text-align:center;
+		   
+           }
+#logo_left p{font-size:40px;
+             color:#ffffff;
+             line-height:60px;
+			 font-style:oblique;
+			 letter-spacing:8px;
+			 }
+#logo_right{width:756px;                                    /*logo右侧背景区域*/
+            height:118px;
+			background-image:url(../images/beijing.jpg);
+			background-repeat:none;
+			background-size:cover;
+			float:right;
+			margin:0 20px 0 0;
+			border:1px solid #000000;
+			text-align:center;
+			line-height:80px;
+			}
+#logo_right p{font-size:32px;
+              letter-spacing:12px;
+			  color:#66ff00;
+			  }
+/******************************************centent****************************************/
+.content{width:1200px;                                       /*content页面中部区域*/
+         height:550px;
+		 background:#669900;
+		 }
+#content_left{width:400px;
+              height:500px;
+			  margin:5px 0 0 20px;
+			  float:left;
+			  
+			  }
+#left_top{width:380px;                                       /*input查询区域*/
+          height:36px;
+		 
+		  margin:0 auto;
+		  }
+#left_top input.c1{width:250px;                              /*查询区域css样式设置开始*/
+                   height:30px;
+				   margin:0 0 0 10px;
+				   border:1px solid #000000;
+				   position:relative;
+				   top:-8px;
+				   left:1px;
+				   }
+#left_top input.c2{width:50px;
+                   height:30px;
+				   margin:0 0 0 -7px;
+				   border:1px solid #000000;
+				   background-image:url(../images/sousuo.jpg);
+				   background-repeat:none;
+				   background-size:cover;
+				   }                                         /*查询区域css样式设置结束*/
+
+#left_center{width:400px;                                     /*垂直导航区域*/
+             height:auto;
+			 
+			 }
+#left_center ul{list-style:none;
+                }
+#left_center li{width:360px;
+                height:40px;
+				line-height:40px;
+				padding:0 0 0 40px;
+				border-bottom:1px dashed #000000;
+				}
+#left_center li a:link,#left_center li a:visited{
+                font-size:18px;
+				text-decoration:none;
+				color:#000000;
+				}
+#left_center li a:hover{display:block;
+                        background:#ff0000;
+						color:#ffffff;
+						font-size:24px;
+						}
+#left_bottom{width:400px;                                     /*合作伙伴区域*/
+             height:auto;
+			 border-top:2px solid #000000;
+			 }
+#left_bottom ul{list-style:none;                              /*合作伙伴列表开始*/
+                }
+#left_bottom li{width:360px;
+                height:40px;
+				line-height:20px;
+				padding:0 0 0 40px;
+				border-bottom:1px dashed #000000;
+				}
+#left_bottom li a:link,#left_center li a:visited{
+                font-size:18px;
+				text-decoration:none;
+				color:#000000;
+				}
+#left_bottom li a:hover{display:block;
+                        background:#ff0000;
+						color:#ffffff;
+						font-size:24px;
+						}                                     /*合作伙伴列表结束*/
+
+#content_right{width:700px;                                   /*右侧内容区域*/
+               height:auto;
+			   float:right;
+			   margin:5px 20px 0 0;
+			   
+			   padding:20px 20px;
+			   }
+#content_right p.t1{line-height:20px;                         /*段落文字css*/
+                    font-weight:bold;
+					letter-spacing:4px;
+					}
+#content_right p.t2{line-height:20px;                       /*段落文字css*/
+                    letter-spacing:4px;
+					}
+#content_right ul{list-style:disc;                         /*技术特点列表开始*/
+                  margin:0 0 0 30px;
+                  }
+#content_right li{width:600px;
+                  height:40px;
+				  line-height:40px;
+				  font-weight:bold;
+				  border-bottom:1px dashed #000000;
+				 
+				  }                                         /*技术特点列表结束*/
+/***********************************bottom*******************************************/
+.bottom{width:1200px;                                       /*底部区域bottom开始*/
+        height:220px;
+		background:#669900;
+		}
+#bottom_left{width:400px;                                   /*力天画廊区域*/
+             height:200px;
+			 float:left;
+			 margin:10px 20px;
+			 background:#ffff33;
+			 }
+#bottom_left ul{list-style:none;
+                }
+#bottom_left li{width:100px;
+                height:80px;
+				float:left;
+				margin:2px 15px;}
+#bottom_center{width:350px;                                /*技术支持区域*/
+               height:200px;
+			   float:left;
+			   margin:0 20px;
+			  
+			   }
+#bottom_center p.t2{line-height:20px;                       /*段落文字css*/
+                   letter-spacing:4px;
+				   text-indent:2em;
+			       }
+#bottom_right{width:300px;                                  /*服务宗旨区域*/
+              height:200px;
+			  float:left;
+			  margin:0 10px;
+			  
+			  }
+#bottom_right p.t2{line-height:20px;                       /*段落文字css*/
+                   letter-spacing:4px;
+				   text-indent:2em;
+			       }
+/********************************footer*****************************/
+.footer{width:1200px;                                      /*footer*/
+        height:50px;
+		background:#000000;
+		margin:0 auto;
+		color:#ffffff;
+		
+		}
+#footer_left{width:600px;
+             height:50px;
+			
+			 float:left;
+			 margin:0 50px;
+			 line-height:60px;
+			 }
+#footer_right{width:160px;
+              height:50px;
+			  
+			  float:right;
+			  margin:0 50px 0 0;
+			  line-height:60px;
+			  }
+
+
+
+			
+					  
+

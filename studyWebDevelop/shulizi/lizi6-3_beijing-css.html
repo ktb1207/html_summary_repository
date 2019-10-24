@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 页面背景的修饰 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+  *{margin:0;padding:0;}
+  body{background-color:#000000;  /*定义背景颜色*/
+	   background-image:url(images/风景1.jpg);  /*定义背景图片*/ 
+	   background-repeat:no-repeat;  /*背景图片无重复*/
+	   background-size:280px 220px; /*设置背景图片大小*/
+	   background-position:750px 170px;}/*使用长度绝对定位，相对于左上角定位*/
+  .box{border-width:2px;
+       
+	   border-style:dashed;
+	   width:700px;
+	   height:500px;
+	   background-color:#ff0000;
+	   background-image:url(images/卡通3.jpg);
+	   background-repeat:no-repeat;
+	   background-size:40% 50%;  /*设置背景图片的大小，百分比相对于div容器的大小*/
+	   background-position:40% 50%; /*背景图片的相对定位，百分比相对于div容器左/上的定位*/
+	   }
+  </style>
+ </head>
+
+ <body>
+  <div class="box"></div>
+ </body>
+</html>

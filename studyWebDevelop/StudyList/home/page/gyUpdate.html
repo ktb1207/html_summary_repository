@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>更新进度-葫芦藤</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/util/url.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/util/pic.js"></script>
+<script type="text/javascript" src="../js/widget/uploadFile.js"></script>
+<script type="text/javascript" src="../js/custom/gyUpdate.js"></script>
+</head>
+<body>
+<!-- header start-->
+
+
+<!-- header end-->
+<!-- con start-->
+<div class="s_report">
+	
+	<!-- 举报项目 start-->
+	<dl class="s_gz" style="margin-top: 0.5rem;">
+		<dt>
+			<img id="v_user_pic" src="" width="100%" />
+		</dt>
+		<dd id="v_item_alias" class="mid"></dd>
+		
+	</dl>
+	<!-- 举报项目 end-->
+	
+	<div class="s_box">
+		<div class="s_pt s_pt2">
+			<textarea id="v_update" data-role="none" placeholder="输入项目更新内容，让项目支持者了解项目的进展情况，提高项目的可信度及复捐率。"></textarea>
+		</div>
+		<!-- 上传图片 start-->
+	    <div class="s_upload">
+	        <ul class="upload-list">
+	            <li class="upload_action">
+					<img src="../image/upload_1.png" width="100%">
+					<input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png,image/gif" id="file_detail" class="fileImage" name="">
+				</li>
+	        </ul>
+	        <p>上传项目进展图片，让支持者实时了解项目进展（最多9张）</p>
+        </div>
+	    <!-- 上传图片 end-->
+
+
+	</div>
+</div>
+<!-- con end-->
+
+<!-- tip begin-->
+		<div id="tip_item" class="l_ban" hidden="true">
+			<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+		</div>
+<!-- tip end-->
+
+<!-- btn start-->
+<div class="s_bm s_bm3">
+	<a id="v_confirm" class="btn">确认</a>
+</div>
+<!-- btn end-->
+
+<!-- 评论 end-->
+</body>
+</html>

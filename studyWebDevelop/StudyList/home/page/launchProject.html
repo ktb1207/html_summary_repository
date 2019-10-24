@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>发起项目-葫芦藤</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<style>
+	.upload-list .upload_action .fileImage {opacity: 0;position: absolute;left: 0;top: 0;width: 100%;height:100%;}
+	div.s_bm p{color: #808080; font-size: 0.6rem; padding-top: 0.5rem; overflow: hidden; margin-bottom: 20px;}
+	div.s_bm span{color: #EE554D;}
+	 div.s_bm{padding: 0.5rem 0.5rem 1rem 0.5rem;}
+	 div.s_xmc a.btn{position: fixed;left: -7px;bottom: -15px;width: 100%;}
+	/*弹出框样式*/
+	div.s_shadow{position:fixed;left: 0;top: 0;}
+	.s_zysx div.s_xmc {position: fixed;left: 0;top: 20%;width: 100%;height:80%;overflow: scroll;}
+    .s_xmtk div.s_xmc{position: fixed;left: 0;bottom: 0;width: 100%;height:80%;overflow: scroll;}
+</style>
+
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/util/date.js"></script>
+<script type="text/javascript" src="../js/util/url.js"></script>
+<script type="text/javascript" src="../js/widget/uploadFile.js"></script>
+<script type="text/javascript" src="../js/custom/launchProject.js"></script>
+
+</head>
+<body>
+<!-- header start-->
+<!-- header end-->
+<!-- goal start-->
+<div class="s_goal">
+	<h2>募款目标</h2>
+	<div class="s_pt">
+		<input id="v_coin_target" data-role="none" type="text" placeholder="填写募款金额，请按实际需求填写，发布后不可修改
+" />
+	</div>
+	<div class="s_pt s_pt2 last">
+		<textarea id="v_coin_usage" data-role="none"  placeholder="填写资金用途，发布后不可修改"></textarea>
+	</div>
+</div>
+<!-- goal end-->
+<!-- 项目周期 start-->
+<div class="s_cycle">
+	<h3>项目周期</h3>
+	<div class="s_ct">
+		<span class="day">共<em class="fc5"></em>天</span>
+		<span class="time">结束时间：<time id="time_end">2016/02/30</time></span>
+	</div>
+	<div class="s_cm">
+		<span class="min"><em id="em_days">3</em>天</span>
+		 <div data-role="rangeslider" class="s_range">
+		    <input id="v_day_count" type="range" name="range-1a" min="3" max="30" value="10"/>		      
+		    <input id="v_day_count_last" type="range" class="last" name="range-1b" min="3" max="30" value="30"/>		    
+        </div>
+		<span class="max"><em>30</em>天</span>
+	</div>
+</div>
+<!-- 项目周期 end-->
+<!-- 项目类型 地点 start-->
+<div class="s_dl">
+	<dl id="div_item_type" class="comdl">
+		<dt>项目类型</dt>
+		<dd id="v_item_type">助医<i class="arrow2"></i></dd>
+	</dl>
+	<dl class="comdl last">
+		<dt>项目执行地点</dt>
+		<dd class="mid">
+			<input id="v_item_act_address" data-role = "none" type="text" placeholder="请输入项目执行地点" value="" />
+		</dd>
+	</dl>
+</div>
+<!-- 项目类型 地点 end-->
+<!-- 验证 start-->
+<div class="s_dl s_yz">
+	<div class="s_pt">
+		<input id="v_item_alias" data-role="none" type="text" placeholder="填写项目标题" />
+	</div>
+	<div class="s_pt s_pt2">
+		<textarea id="v_item_desc" data-role="none"  placeholder="详细描述项目的基本情况：
+个人求助请填写家庭背景、经济状况、患病经历等；公益组织请填写募款目的、起止时间和地域、活动负责人姓名和办公地址、受益人、募得款物用途等"></textarea>
+	</div>
+	<!-- 上传图片 start-->
+	<div class="s_upload">
+        <ul class="upload-list">
+            <li class="upload_action">
+				<img src="../image/upload_1.png" width="100%">
+				<input type="file" multiple="multiple"  accept="image/jpg,image/jpeg,image/png,image/gif" id="file_cover" class="fileImage" name=""/>
+			</li>
+        </ul>
+        <p>分享页封面、详情展示页首图(1张)</p>
+    </div>
+    <div class="s_upload">
+        <ul class="upload-list">
+            <li class="upload_action">
+				<img src="../image/upload_1.png" width="100%">
+				<input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png,image/gif" id="file_detail" class="fileImage" name="">
+			</li>
+        </ul>
+        <p>个人求助发起的助医类项目，建议上传患者治疗中的照片、患者患病前后生活照对比、手持身份证照片、费用收据、医院诊断证明等照片，提高项目可信度。(最多9张)
+</p>
+    </div>
+    <!-- 上传图片 end-->
+</div>
+<!-- 验证 end-->
+<!-- 协议 start-->
+<div class="s_hb">
+    <a class="chk on"></a>
+    <span>已阅读并同意《<a class="t-xy" id="serviceBtn">项目发起条款</a>》</span>
+</div>
+<!-- 协议 end-->
+<!-- tip begin-->
+<div id="tip_item" class="l_ban" hidden="true">
+	<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+</div>
+<!-- tip end-->
+<!-- btn start-->
+
+<div class="s_bm">
+	<p><span>本人承诺：</span>所提交的文字与图片资料完全真实，无任何虚构事实及隐瞒真相的情况，如有不实，愿承担全部法律责任。
+</p>
+	<a id="a_publish" class="btn">发布项目</a>
+</div>
+<!-- btn end-->
+<!--项目类型list start-->
+<div id="div_typeList" class="s_tyl hide">
+    <div id="wrapper">
+        <div id="scroller">
+            <div class="list_m">
+            	<h3>请选择</h3>
+                <ul id="ul_typeList" class="list">
+                	<li value="1">助医</li>
+                	<li value="2">助学</li>
+                	<li value="3">养老</li>
+                	<li value="4">助残</li>
+                	<li value="5">创意</li>
+                	<li value="6">梦想</li>
+                	<li value="7">健康</li>
+                	<li value="8">生活</li>
+                	<li value="0">其他</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--项目类型list end-->
+<!--项目条款 start-->
+<div id="div_clause" class="s_shadow s_fb s_xmtk hide">
+    <div class="s_xmc">
+    	<h3>项目发起条款</h3>
+    	<p><span>1、项目发起人资格</span>18 周岁以上；中华人民共和国公民；拥有能够在中国地区接收人民币汇款的银行卡；提供必要的身份认证和资质认证，根据项目内容，有可能包括但不限于：身份证、护照、学历证明等；其他根据项目发起、执行需求相关的必须条件。</br>
+18 周岁以下的中华人民共和国公民可经由符合以上条款具有资格的家长或老师代为发起和经营创意项目；非中华人民共和国公民欲创建项目，需通过邮件方式递交申请，经批准可通过具有合法资质的代理机构进行项目发起。</p>
+    	<p><span>2、项目发布</span>根据相关法律法规，项目提交后，须经过网站工作人员审核后才能发布；根据项目的内容，工作人员会要求发起人提供相关材料，
+    		证明项目的可行性，以及发起人的执行能力；葫芦藤公益平台对提交筹款申请的项目是否拥有上线资格具有最终决定权（具备筹资上线资格的项目的上线时间由项目
+    		发起人自行决定）；项目内容规范（不符合以下内容规范的项目将被退回）项目内容必须完整、合理、具有可行性；有完整的计划和执行能力，且图片、
+    		视频不能借用或盗用非本人或公司拍摄的内容。</br>
+   			项目应该有明确的目标，如为某某孩子募集一年学费、为完成自己的心愿出一本书或完成一件艺术品。可以完成的，有具体完成时间的才叫项目。</br>
+  			 创立一家公司就不是一种项目。项目不得为产品众筹，或者变相的商业营销，但可以是滞销农产品的紧急求助。</br>
+			以下类别的项目和内容将不被允许在此发布：</br>
+			毒品、类似毒品的物质、吸毒用具、烟等相关，
+			枪支、武器和刀具相关，
+			多级直销和传销类相关，
+			令人反感的内容(仇恨言论、不适当内容等)，
+			色情内容相关，
+			支持或反对政治党派的项目，
+			推广或美化暴力行为的项目
+			对奖、彩票和抽奖活动相关。 </br>
+			*凡在葫芦蕂公益平台发布募款及求助的用户，在提现时葫芦藤不会收取任何手续费。</br>
+			项目不得以不可行、不合理的承诺作为回报。</br>
+			项目回报必须是项目的衍生品，不得是与项目无关的回报内容。</br>
+
+</p>
+    	<p><span>3、项目推荐标准：</span>推荐：被公益组织认领的项目可以被推荐并且全网展示。</br>
+						强烈推荐：合格并且满足下列标准中的任意3项以上，视为强烈推荐。</br>
+						项目内容逻辑性强、完整且条理清晰、可执行，有完整的计划和能力，有相关的图片和视频，项目内容有故事性、有热点，具备可传播性。</p>
+    	<a class="btn" id="s_xm_btn">已阅读并同意</a>
+    </div>
+</div>
+<!--项目条款 end-->
+<!--注意事项 start-->
+<div id="div_notice" class="s_shadow s_fb s_zysx">
+    <div class="s_xmc">
+    	<h3>“葫芦藤”发起项目注意事项</h3>
+    	<p>1、募款达到或超出目标金额（最后一笔支持金额），或到截止时间，项目将结束并标记为“已成功”或“已结束”。</p>
+    	<p>2、发起的项目，在目标时间内，达到目标金额，支持者不可以继续支持；若发起人想继续筹款，需要再次发布项目，并说明筹款原因；若筹款过程中，发起人急需使用筹款，目标金额未达到或目标金额达到但目标时间未达到，均可以选择「项目管理」-「提前结束」，申请提前结束。</p>
+    	<p>3、达到募款时间，未达到目标金额，项目状态标记为“已结束”，但已经筹集的资金仍然可以申请提现使用。</p>
+    	<p>4、在葫芦藤发起的项目，必须完成实名认证及项目验证方可提现，为了避免因验证影响资金使用，建议在募款过程中同步申请验证。</p>
+    	<p>5、如何提前结束并提现：</br>
+    			第一步：进入葫芦藤公益微信公众号（微信号hulutenggongyi），点击“公益主页”-“我发起的”。</br>
+				第二步：点击对应项目的“管理”，屏幕底部将弹出筹款管理的弹窗，点击“提前结束”。</br>
+				第三步：若此前已经提交过实名认证及项目提现验证并经过审核，可进入提前结束申请页面；若还没有提交验证信息，
+				需要先进行项目	验证，再申请提前结束。</br>
+				第四步：提交成功后，项目左上角的状态将更改为“已结束”，若验证通过，系统将进入提现流程，你发起项目的筹款金额将进入
+				到你的钱包。若验证未通过，请根据客服回复的原因重新提交验证信息。</br>
+				第五步：验证完成后，进入“我的钱包”，点击“余额提现”，填写完成后，点击“提现申请”，余额将进行相应的调整。</br>
+				第六步：提现申请提交后，你将在1-3个工作日内将收到款项。 </br>
+    	</p>
+    	<p>6、项目发布后，发布人可以对项目更新进展，但不能对项目内容进行修改，如有明显的错误请与平台客服联系。</p>
+    	<p>7、葫芦藤公益募款平台不收取募款手续费。</p>
+    	<a class="btn" id="s_zy_btn">知道了</a>
+    </div>
+</div>
+<!--注意事项 end-->
+</body>
+</html>

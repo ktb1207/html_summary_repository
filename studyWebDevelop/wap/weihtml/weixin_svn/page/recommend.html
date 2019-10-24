@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>智能推荐</title>
+		<link type="text/css" rel="stylesheet" href="../css/wx.css"/>
+		<script src="../js/lib/zepto.js"></script>
+		<script src="../js/lib/jweixin-1.0.0.js"></script>
+		<script src="../js/method/base.js"></script>
+		<script src="../js/custorm/recommend.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--top strat-->
+			<div class="re_top">
+				<i class="re_tl" id="jump_back"></i>
+				<h1 class="re_tittle">智能推荐</h1>
+				<span class="re_tr" id="jump_more">更多</span>
+			</div>
+			<!-- top end-->
+			<!--place start-->
+			<div class="re_place">
+					<div class="re_place_num" id="machineNum">01</div>
+					<div class="re_place_des">
+						<p class="re_place_state" id="machineDes01">波轮洗衣机<span>空闲</span></p>
+						<p class="re_place_location" id="machineDes02">万达广场2号楼B座1202<span>12层</span></p>
+					</div>
+			</div>
+			<!-- place end-->
+			<!-- details start-->
+			<div class="re_details">
+				<div class="re_wash_mode" id="modelDesc">
+					<p>标准<span>￥3.00</span>35分钟</p>
+				</div>
+				
+				<div class="re_place_selectMode" >
+					<ul id="selectModel">
+						<!--
+							<li>
+								<img src="../images/wx_modeid6.png" class="re_mode_img">
+								<p class="re_selectModeTittle">标准</p>
+							</li>
+						-->
+							
+							
+					</ul>
+				</div>
+				<p class="re_modeDesc" id="modelDetails">
+				
+					模式说明：大件衣物洗涤程序，可洗床单、被罩、窗帘等
+				</p>
+			</div>
+			<!-- detaile end-->
+			<!-- selecttime start-->
+			<div class="re_draptime">
+				<p>请选择烘干时间(10-120分钟)</p>	
+				<div class="re_drapnum">
+					<ul id="drap_num">
+						<li>10</li>
+						<li>20</li>
+						<li>30</li>
+						<li>40</li>
+						<li>50</li>
+						<li>60</li>
+						<li>70</li>
+						<li>80</li>
+						<li>90</li>
+						<li>100</li>
+						<li>110</li>
+						<li>120</li>
+						</ul>
+				</div>
+				<div class="re_drapheri">
+					<ul id="drap_heri">
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+						<li><i class="wa_drapheribar"></i></li>
+					</ul>
+				</div>
+				<div class="re_drapbar"></div>
+				<div class="re_drapscroll" id="drap"></div>
+			</div>
+			<!-- selecttime end-->
+			<div class="re_tapSure" id="sureBook">
+				确认下单
+			</div>
+		</div>
+	</body>
+</html>

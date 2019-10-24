@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>洗衣机详情</title>
+		<link type="text/css" rel="stylesheet" href="../css/wx.css"/>
+		<script src="../js/lib/zepto.js"></script>
+		<script src="../js/method/des.js"></script>
+		<script src="../js/method/base.js"></script>
+		<script src="../js/custorm/washDetails.js"></script>
+	</head>
+	<body>
+		
+		<div class="wrap">
+			
+			<!--top stard-->
+			<div class="wa_top" id="topNav">				
+				<i class="wa_tl" id="jump_back"></i>
+				<h1 class="wa_tittle"> </h1>
+				<i class="wa_tr" id="selected"></i>
+			</div>
+			<!--mashion_img stard-->
+			<div class="wa_mid">
+				<img src="../images/wx_wash1010.png" alt="" id="machineImg" class="wa_midimg01"/>
+			</div>
+			
+			<!--details stard-->
+			<div class="wa_details">
+				<div class="wa_place">
+					<div class="wa_place_num" id="machineNum">01</div>
+					<div class="wa_place_des">
+						<p class="wa_place_state" id="machineDes01"> <span> </span></p>
+						<p class="wa_place_location" id="machineDes02"> <span> </span></p>
+					</div>
+				</div>
+				<div class="wa_wash_mode" id="modelDesc">
+					<!--
+						<p>标准<span>￥3.00</span>35分钟</p>
+					-->
+
+				</div>
+				<div class="wa_place_selectMode" >
+					<ul id="selectModel">
+						<!--
+							<li>
+								<img src="images/wx_modeid6.png" class="wa_mode_img">
+								<p class="wa_selectModeTittle">标准</p>
+							</li>
+						-->
+					</ul>
+				</div>
+				
+				<p class="wa_modeDesc" id="modelDetails">
+					<!--
+						模式说明：大件衣物洗涤程序，可洗床单、被罩、窗帘等,在第一次漂洗时，通臭氧杀菌
+					-->
+				</p>
+				<!--
+					<div class="ceshi"></div>
+				-->
+				
+				<div class="wa_draptime">
+					<p>请选择烘干时间(10-120分钟)</p>	
+					<div class="wa_drapnum">
+						<ul id="drap_num">
+							<li>10</li>
+							<li>20</li>
+							<li>30</li>
+							<li>40</li>
+							<li>50</li>
+							<li>60</li>
+							<li>70</li>
+							<li>80</li>
+							<li>90</li>
+							<li>100</li>
+							<li>110</li>
+							<li>120</li>
+						</ul>
+					</div>
+					<div class="wa_drapheri">
+						<ul id="drap_heri">
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+							<li><i class="wa_drapheribar"></i></li>
+						</ul>
+					</div>
+					<div class="wa_drapbar"></div>
+					<div class="wa_drapscroll" id="drap"></div>
+				</div>	
+			</div>
+			<!--tapSure stard-->
+			<div class="wa_tapSure" id="sureBook">
+				即时预定
+			</div>
+			
+			<!--信息提示-->
+			<div class="wa_message" id="tip_say"></div>
+		</div>
+	</body>
+</html>

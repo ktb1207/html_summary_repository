@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.gwap{
+				width:400px;
+				height:300px;
+				background-color:blanchedalmond;
+				font-size:20px;
+			}
+			.showposition{
+				width:400px;
+				height:300px;
+				background-color:olive;
+				font-size:24px;
+				color:red;
+			}
+			.tel{
+				width:400px;
+				height:200px;
+				background-color:#000000;
+				color:#fff;
+				text-align:center;
+				line-height:200px;
+			}
+		</style>
+		<script type="text/javascript" src="../js/lib/zepto.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				function loadDemo(){
+					if(navigator.geolocation){
+						$(".gwap").html("浏览器支持地理位置信息");
+					}else{
+						$(".gwap").html("浏览器不支持地理位置信息");
+					}
+				}
+				
+				function getPosition(){
+					navigator.geolocation.getCurrentPosition(show_map,handle_error);
+					function show_map(position){					//成功处理
+						var latitude = position.coords.latitude;
+						var longitude = position.coords.longitude;
+						$(".showposition").html("您的地理位置信息为:"+longitude+","+latitude);
+					}
+					function handle_error(error){					//错误处理
+						switch(error.code){
+							case 1:
+								alert("位置服务被拒绝");
+								break;
+							case 2:
+								alert("获取不到位置信息");
+								break;
+							case 3:
+								alert("获取信息超时");
+								break;
+							default:
+								alert("位置错误");
+								break;
+						}
+					}
+				}
+				loadDemo();					//检测浏览器是否支持地理位置信息
+				getPosition();
+				
+				
+				
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<div class="gwap"></div>
+		<div class="showposition">
+			
+		</div>
+		<div class="tel">
+			拨打电话:<a href="tel:13103820893">13103820893</a>
+			
+		</div>
+	</body>
+</html>

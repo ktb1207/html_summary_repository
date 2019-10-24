@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>个人设置-葫芦藤</title>
+<style>
+	
+	div.s_shadow div.s_qc{position: fixed;left: 0;bottom: 25%;width: 100%;}
+</style>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/widget/uploadFile.js"></script>
+<script type="text/javascript" src="../js/util/url.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/util/pic.js"></script>
+<script type="text/javascript" src="../js/custom/mySetting.js"></script>
+</head>
+<body>
+<!-- header start-->
+
+<!-- header end-->
+<!-- tip begin-->
+<div id="tip_item" class="l_ban" hidden="true">
+	<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+</div>
+<!-- tip end-->
+<div class="m_set">
+	<dl class="s_gz" id="dl_picture">
+		
+		<dd class="mid">
+			更改头像
+		</dd>
+		<dt>
+			<img id="v_user_pic" src="" width="100%" />
+		</dt>
+		<dd class="rig"><i class="arrow"></i></dd>
+	</dl>
+	<dl id="dl_userName" class="s_gz">
+		
+		<dd class="mid">
+			用户名
+		</dd>
+		<dt id="v_user_alias" style="width: 6rem;"></dt>
+		<dd class="rig"><i class="arrow"></i></dd>
+	</dl>
+	<dl class="s_gz">
+		
+		<dd class="mid">
+			绑定手机
+		</dd>
+		<dt id="v_phone" style="width: 6rem;">18100000000</dt>
+	</dl>
+</div>
+
+<div class="m_set">
+	<dl id="dl_downloadApp" class="s_gz">
+		<dd class="mid">
+			APP下载
+		</dd>
+		<dd class="rig"><i class="arrow"></i></dd>
+	</dl>
+	<dl id="dl_about" class="s_gz">
+		<dd class="mid">
+			关于葫芦藤
+		</dd>
+		<dd class="rig"><i class="arrow"></i></dd>
+	</dl>
+</div>
+<!-- btn start-->
+<div class="s_bm">
+	<a class="btn btn2" style="color: #ee554d;" href="login.html">退出登录</a>
+</div>
+<!-- btn end-->
+<!--messagebox-->
+
+<div class="s_shadow s_qh" style=" display:none;">
+	<div class="s_qc">
+		<h3>图片选择</h3>
+		<ul class="s_qm">
+			<li id="s_Photo">
+				<i></i>
+				<p>相册</p>
+			
+			</li>
+			<li  id="s_Taking">
+				<i></i>
+				<p>拍照</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--picselectbox start-->
+<div class="s_shadow s_pic" style=" display:none;">
+		<div class="s_qc">
+			<ul class="upload-list">
+	           <li class="upload_action">
+					<img src="../image/upload_1.png" width="100%" />
+					<input type="file" accept="image/jpg,image/jpeg,image/png,image/gif" class="fileImage" id="file_orgPhoto" name="">
+				</li>
+	  	  	</ul>
+	  	  	<div class="s_bm">
+				<a id="btn_sbmVerify" class="btn">确定</a>
+			</div>
+		</div>	
+</div>
+<!--picselectbox end-->
+<!-- messagebox start-->
+<div class="pop pop2" style=" display:none;">
+	<div id="Dialog1" class="dialog">
+		<a class="d-close"><i></i></a>
+		<h3>修改用户名</h3>
+		<div class="d-ipu">
+			<textarea id="txtr_newUserName" data-role="none" placeholder="请输入用户名"></textarea>
+		</div>
+		<div class="d-btn">
+			<a id="a_cancel">取消</a>
+			<a id="a_ok">确定</a>
+		</div>
+	</div>
+</div>
+<!-- messagebox end-->
+</body>
+</html>

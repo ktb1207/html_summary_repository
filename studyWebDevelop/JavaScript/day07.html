@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>String对象charAt属性获取字符串中的位置字符 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//弹出页面输入信息
+	var tText=prompt("请输入您的英文名字")
+	document.write("<h3>您输入的名字为："+tText);
+	//创建一个String对象
+	var sString=new String(tText);					//直接调用定义的变量tText不使用引号
+	//使用for循环显示每个字符串字符
+	for(var i=0;i<sString.length;i++)
+	{
+		//显示每一个字符
+		document.write("<h3>字符串中第"+(i+1)+"个字符为："+sString.charAt(i));
+	}
+	
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

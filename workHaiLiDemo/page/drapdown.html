@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>滚动文字</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			.wrap{width:100%;height:100%;position:absolute;background-color:blanchedalmond;}
+			.top{width:100%;height:40px;background-color:#FFFFFF;margin-top:20px;}
+			.mar1{width:80%;height:100%;margin:0 10%;line-height: 40px;}
+		</style>
+		<script src="../js/lib/zepto.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="top">
+				<marquee class="mar1" direction="left" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">当我孤独的时候还可以抱着你</marquee>
+			</div>
+		</div>
+	</body>
+</html>
+<!--
+	direction表示滚动的方向，值可以是left，right，up，down，默认为left 
+	behavior表示滚动的方式，值可以是scroll（连续滚动）slide（滑动一次）alternate（往返滚动） 
+	loop表示循环的次数，值是正整数，默认为无限循环 
+	scrollamount表示运动速度，值是正整数，默认为6 
+	scrolldelay表示停顿时间，值是正整数，默认为0，单位似乎是毫秒 
+	align表示元素的垂直对齐方式，值可以是top，middle，bottom，默认为middle 
+	bgcolor表示运动区域的背景色，值是16进制的RGB颜色，默认为白色 
+	height、width表示运动区域的高度和宽度，值是正整数（单位是像素）或百分数，默认width=100% height为标签内元素的高度 
+	hspace、vspace表示元素到区域边界的水平距离和垂直距离，值是正整数，单位是像素。
+	onmouseover=this.stop() onmouseout=this.start()表示当鼠标以上区域的时候滚动停止，当鼠标移开的时候又继续滚动。
+-->

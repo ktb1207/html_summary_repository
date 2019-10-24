@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 延时定时操作 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javasript" type="text/javascript">
+	//窗口关闭时间
+	function myFunction2(){
+		alert("您确定要关闭吗？");
+	}
+	//设置延时定时
+	function myFunction(){
+		myTimeout=window.setTimeout("alert('时间到!')",5000);
+	}
+	//取消延时定时
+	function myFunction2(){
+		window.clearTimeout(myTimeout);
+	}
+  </script>
+ </head>
+
+ <body>
+	<center><h1>设置和取消延时定时操作</h1></center>
+	<hr size="4" color="#0000ff">
+	<h3>点击开始答题，计时开始，请在5s内完成选择！</h3>
+	<form action="" name="name1">
+		<input type="button" value="开始答题" onclick=myFunction()> <br>
+		<input type="button" value="A" onclick=myFunction2()>
+		<input type="button" value="B" onclick=myFunction2()>
+		<input type="button" value="C" onclick=myFunction2()>
+		<input type="button" value="D" onclick=myFunction2()>
+	</form>
+	<script language="javasript" type="text/javascript">
+		//触发窗口关闭事件
+		window.onunload=myFunction2;
+	 </script>
+ </body>
+ 
+</html>

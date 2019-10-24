@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> JavaScript创建锚点和超链接的方法 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	var sString=new String("JavaScript");
+	//创建对象锚点
+	document.write("<h3>创建锚点的结果为："+sString.anchor('name'));
+	//为字符串对象创建锚点
+	document.write("<h3>创建锚点的结果为："+"Hello Word".anchor('hello'));
+	//为String对象创建URL超链接
+	document.write("<h3>创建超链接的结果为："
+		+sString.link('www.baidu.com'));
+	//为字符串对象创建锚点超链接
+	document.write("<h3>创建超链接的结果为："
+		+"点击此处可跳转到页面‘Hello Word’位置".link('hello'))
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

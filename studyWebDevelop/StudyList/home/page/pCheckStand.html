@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>收银台</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="../js/lib/jquery.mobile-1.4.5.min.js" ></script>
+<script type="text/javascript" src="../js/util/scale.js" ></script>
+<script type="text/javascript" src="../js/util/url.js" ></script>
+<script type="text/javascript" src="../js/util/pic.js" ></script>
+<script type="text/javascript" src="../js/weixin/jweixin-1.0.0.js" ></script>
+<script type="text/javascript" src="../js/custom/pCkeckStand.js" ></script>
+
+</head>
+<body>
+<!-- header start-->
+<!-- header end-->
+<!-- con start-->
+<div class="s_con">
+	<!-- 关注 start-->
+	<dl class="s_gz">
+		<dt>
+			<img src="../image/pro/pro5.jpg" id="v_item_user_pic" width="100%" />
+		</dt>
+		<dd class="mid" id="v_item_alias">关注留守儿童</dd>	
+	</dl>
+	<!-- 关注 end-->
+	<h3 class="s_qtit">捐助</h3>
+	<!-- item start-->
+	<div class="s_dl s_dl2">
+		<dl>
+			<dt class="lef">捐助金额</dt>
+			<dd class="mid">
+				<input type="text" id="v_pay_coin" placeholder="请输入捐助金额" value="" />
+			</dd>
+		</dl>
+	</div>
+	<!-- item end-->
+	
+	<h3 class="s_qtit">支付方式</h3>
+	<!-- item start-->
+	<div class="s_dl s_dl2">
+		<dl>
+			<dt class="lef lef3">
+				<i class="wx"></i>
+			</dt>
+			<dd class="mid">微信支付</dd>
+			<dd class="rig"><i class="sel on"></i></dd>
+		</dl>
+	</div>
+	<!-- item end-->
+	
+	<h3 class="s_qtit">给小伙伴们说句话吧</h3>
+	<!-- item start-->
+	<div class="s_dl s_dl2">
+		<dl>
+			<dd style="padding:0.2rem 0.5rem;">
+				<textarea data-role="none" placeholder="默认：支持"></textarea>
+			</dd>
+		</dl>
+	</div>
+	<!-- item end-->
+</div>
+<!-- con end-->
+<!-- tip begin-->
+<div id="tip_item" class="l_ban" hidden="true">
+	<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+</div>
+<!-- tip end-->
+<!-- btn start-->
+<div class="s_bm">
+	<a class="btn" id="do_pay">确认支付</a>
+</div>
+<!-- btn end-->
+</body>
+</html>

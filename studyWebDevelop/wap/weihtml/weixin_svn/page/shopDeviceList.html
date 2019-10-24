@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>洗衣店设备列表</title>
+		<link type="text/css" rel="stylesheet" href="../css/mui.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/wx.css"/>
+		<script src="../js/lib/zepto.js"></script>
+		<script src="../js/lib/mui.js"></script>
+		<script src="../js/lib/iscroll.js"></script>
+		<script src="../js/method/des.js"></script>
+		<script src="../js/method/base.js"></script>
+		<script src="../js/custorm/shopDeviceList.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--top start-->
+			<div class="sl_top">
+				<i class="sl_tl" id="jump_back"></i>
+				<h1 class="sl_tittle" id="title_name">万达广场12</h1>
+				<i class="sl_tr" id="selected"></i>
+			</div>
+			<!--top end-->
+			
+			<!--select floor start-->
+			<div class="sl_floor">
+				<div class="sl_floor_top">
+					<div class="floor_top_left" id="device_num"></div>
+					<div class="floor_top_left" id="device_num01"></div>
+					<div class="floor_top_left" id="device_num02"></div>
+					<div class="floor_top_bar" id="select_floor">
+						<img src="../images/wx_sdl_down.png" class="floor_bar_img">
+					</div>
+					<div class="floor_top_right">楼层</div>
+				</div>   
+				
+				<div class="floor_conter">
+					<ul id="floor_num">
+						<li style="color:#33beff;font-size:2.2rem">显示全部</li>
+						<!--
+							<li>01楼</li>
+						-->
+					</ul>
+				</div>   
+			</div>
+			<!--select floor end-->
+			
+			
+			<!--device list start-->
+			<div class="sl_device_conter" id="device_list">
+						
+			</div>	
+			
+			<!--device list end-->
+			
+			
+			<!--信息提示-->
+			<div class="wa_message" id="tip_say"></div>
+		</div>							<!--wrap-->
+		
+	</body>
+</html>
+
+

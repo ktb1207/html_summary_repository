@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>个人资料</title>
+    <link type="text/css" rel="stylesheet" href="css/wx.css"/>
+    <script src="js/zepto.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+<h1 class="h1_wx01">个人资料</h1>
+<a href="#" class="wx_fh"><img src="images/wx_leftbtn01.png" /></a>
+<p>请您补全个人资料，方便您享受更多服务</p>
+<ul class="reg_ul01 login_ul01">
+    <li>
+        <label><span>账号：</span><input value="手机号/用户名" type="text" class="phonename" /></label>
+        <img src="images/wx_closed01.png" class="wx_delipt01" />
+    </li>
+    <li>
+        <label><span>密码：</span><input value="6-16位数字、字母或符号" type="text" class="reg_password" /></label>
+        <img src="images/wx_closed01.png" class="wx_delipt01" />
+        <img src="images/password_open.png" class="wx_delipt02" />
+    </li>
+</ul>
+<p class="wx_regp01"></p>
+<p class="wx_regbtn01">确定</p>
+<script>
+    $(function(){
+        var dataurl = 'http://103.8.220.166:40000/saywashnew/WashCallApi';
+        //请求接口
+        $('.wx_regbtn01').on('tap',function(){
+            $.ajax({
+                type:"POST",
+                url:''+dataurl+'/api/user/updateuserName.api',
+                data:{"tokenId":'UVRzdGJ0ZTN4d2JwQnUzZm1xbXRkOVdicXpvaEZmRXJnRlRCR2NHTjhJSFB5YVJSVnR3ZGU3ZXFXZ2U5UmpyRg==',"userName":$('.phonename').val(),"password":$('.reg_password').val()},
+                dataType:"json",
+                success:function(data){
+                    console.log(data);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

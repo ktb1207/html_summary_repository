@@ -1,0 +1,56 @@
+
+*{margin:0;padding:0;}
+#warp{
+	width:600px;
+	height:500px;
+	margin:50px auto;
+}
+#top{
+	width:598px;
+	height:80px;
+	background:#ccffff;
+	line-height:80px;
+	text-align:center;
+	border:1px solid #555;
+}
+#top input{
+	height:30px;
+}
+#atittle{
+	height:30px;
+	width:600px;
+	background:#666;
+}
+#atittle ul{
+	list-style:none;
+	font-size:24px;
+	font-weight:bold;
+}
+#atittle ul li{
+	float:left;
+	width:100px;
+	height:30px;
+	margin:0 20px;
+}
+#bottom{
+	width:598px;
+	height:390px;
+    border:1px solid #555;
+}
+#bottom ul{
+	display:block;
+	list-style:none;
+	border-bottom:2px solid blue;
+	height:38px;
+	width:590px;
+}
+#bottom ul li{
+	display:block;
+	margin:0 0 0 0px;
+	float:left;
+	width:100px;
+	height:38px;
+	text-align:center;
+	line-height:38px;
+	
+}

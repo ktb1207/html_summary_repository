@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>鼠标进入\移动\离开事件 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义鼠标进入事件函数
+	function myFunction1(){
+		document.myForm.text1.value="鼠标进入";
+	}
+	//定义鼠标移动事件函数
+	function myFunction2(){
+		document.myForm.text2.value="鼠标移动";
+	}
+	//定义鼠标离开事件函数
+	function myFunction3(){
+		document.myForm.text3.value="鼠标离开";
+	}
+
+  </script>
+ </head>
+
+ <body>
+	<h1>鼠标进入、移动、离开事件的演示</h1>
+	<form action="" method="post" name="myForm">
+		<textarea name="textarea1" cols="80" rows="10" onmouseover="myFunction1()" 
+			onmousemove="myFunction2()" onmouseout="myFunction3()">
+		</textarea> <br>
+		<input type="text" name="text1">
+		<input type="text" name="text2">
+		<input type="text" name="text3">
+	</form>
+ </body>
+</html>

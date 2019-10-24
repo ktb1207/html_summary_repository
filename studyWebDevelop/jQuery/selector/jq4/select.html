@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>选择器实验</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" src="jquery-1.12.0.js"></script>
+  <script type="text/javascript" src="jq5.js"></script>
+  <script type="text/javascript">
+	$(function(){
+	//利用first获取组件
+	//$("p:first").css("border","2px dotted lightblue");
+	//$("div:last").css("border","2px dotted lightblue");
+	//奇偶数在jQuery中的索引是从0开始的，所以这里的奇偶数和生活中所说的相反
+	//odd奇数
+	//$("p:odd").css("border","2px dotted lightblue");
+	//even偶数
+	//$("p:even").css("border","2px dotted lightblue");
+	//eq-获取指定位置，下标从0开始
+	//$("a:eq(2)").css("border","4px dotted red");
+	//指定位置以后的
+	//$("a:gt(2)").css("border","4px dotted red");
+	//小于指定位置之前的元素
+	$("p:lt(1)").css("border","4px dotted red");
+
+	});
+  </script>
+ </head>
+
+ <body>
+	<div id="astyle">
+		<p>爱上你是我的错</p>
+		<p>爱上了别人的人</p>
+		<p>一万个理由</p>
+		<p>不要再说对不起</p>
+	</div>
+	<div id="bstyle">
+		<a href="#">百度</a>
+		<a href="#">新浪</a>
+		<a href="#">智联招聘</a>
+		<a href="#">腾讯网</a>
+		<a href="#">51前程无忧</a>
+	</div>
+	<form name="form1" id="cstyle">
+		名字：<input type="text" value="name"> <br>
+		密码：<input type="text" value="pass"> <br>
+	</form>
+ </body>
+</html>

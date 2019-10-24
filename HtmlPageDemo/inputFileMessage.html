@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js获取input上传文件信息</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <style>
+        .content{height:400px;width:600px;margin:0 auto;background-color: #5cb85c;padding:12px;24px;}
+        .a-ptext{font-size:18px;color:#333333;line-height: 18px;}
+        .file-style{height:36px;width:160px;background-color: #666666;margin-top:24px;}
+        .file-message{color:red;}
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="a-ptext">js获取选中文件信息</p>
+        <input type="file" name="apkFile" id="fileName" class="file-style">
+        <p class="file-message"></p>
+    </div>
+</body>
+<script type="text/javascript">
+    $(function(){
+        var fileInput = document.getElementById("fileName");
+        var info = '请选择文件..'
+        fileInput.addEventListener('change',function(e){
+            console.log(e);
+            var value = this.value;
+            if(value==''||value==undefined||value==null){
+                $(".file-message").text(info);
+                return false;
+            }
+
+            var fileArr = this.files[0];
+            var filemessage = '文件名：'+fileArr.name+'<br>'+'文件大小：'+transformFileSize(fileArr.size)+'<br>'+'文件类型：'+fileArr.type;
+            $(".file-message").html(filemessage);
+        });
+
+        function transformFileSize(size){
+            var lang = '';
+            if(size==0){
+                lang = 0+'k';
+            }else if(size<1024){
+                lang = Math.floor(size * 100) / 100+'b';
+            }else if(size>=1024&&size<1048576){
+                lang = Math.floor(size/1000 * 100) / 100+'kb';
+            }else if(size>=1048576&&size<1073741824){
+                lang = Math.floor(size/1000000 * 100) / 100+'mb';
+            }else{
+                lang = size;
+            }
+            return lang;
+        }
+
+        $("#fileName").change(function(e){
+            console.log(e);
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,173 @@
+
+
+*{margin:0;                                             /*全局外边距0，内边距0*/
+  padding:0;
+  }                                                     
+.container{width:990px;                                   /*div大容器*/
+           height:auto;
+		   
+		   margin:0 auto;}                                              
+.header{width:990px;                                      /*header区域，放置背景图片*/
+        height:120px;
+		
+	    background-image:url(../images/header.jpg);
+	    background-repeat:no-repeat;
+	    background-size:cover;}                          
+.header_left{width:300px;                                 /*左侧logo区域*/
+             height:80px;
+			 color:#ffffff;
+			 margin:0 80px;
+			 text-align:left;
+			 padding:10px 0;
+			 line-height:40px;
+			 float:left;}                           
+#t1{font-family:Arial;
+     font-size:24px;
+	 font-weight:bold;
+	 font-style:oblique;
+	 word-spacing:2px;
+	 letter-spacing:2px;}
+#t2{font-family:黑体;
+    font-size:18px;
+	font-weight:bold;
+	}
+.header_right{width:400px;                               /*右侧logo区域*/ 
+              height:80px;
+			  color:#ffff00;
+			  float:right;
+			  line-height:80px;
+			  margin:40px 40px;
+			
+			  }                        
+#t3{font-family:Arial;
+    font-size:32px;
+	font-style:oblique;
+	word-spacing:2px;
+	letter-spacing:4px;}
+.header_bottom{width:600px;                                /*导航区域*/     
+               height:50px;
+			   
+			   float:left;
+			   position:absolute;
+			   left:200px;
+			   top:70px;
+			   line-height:70px;
+			   }                        
+	
+ul li{list-style:none;                                 /*设置超链接css样式*/             
+      float:left;
+	  padding:0 20px;
+	  display:block;
+	  
+	  } 
+ul li a{color:#ffffff;
+        font-size:16px;
+		text-decoration:none;}
+ul li a:hover{background:#66ff00}
+            
+.middle{width:100%;                                  /*页面中间部分内容区域middle*/             
+        height:auto;
+		background:#ff0000;
+		}
+            
+.middle_left{width:22%;                               /*middle区域左侧div middle_left*/  
+             height:100%;
+			 background:#ffff99;
+			 float:left;
+			 }
+			
+.middle_top1{width:280px;                              /*middle_top1区域div*/
+             height:auto;
+			 background:#66ff00;	
+			 padding:10px 10px;
+				 }
+		
+#t4{font-family:黑体;                                  /*网购标准段落样式css*/     
+    font-size:16px;
+	line-height:20px;}
+	    
+.left_line{width:280px;                                  /*左侧虚线样式div*/
+           height:10px;
+		   padding:10px 10px;
+		   }
+		
+#line1{border-style:dotted;                               /*虚线样式css*/
+       border-width:2px;
+	   border-color:#000000;}
+	   
+.left_bottom{width:280px;                                   /*左侧底部div样式*/
+               height:auto;
+			   padding:0 10px 0 10px;
+			  
+			   }
+ol li{list-style:none;                                        /*新闻列表样式css*/
+      font-size:14px;
+	  font-family:宋体;
+	  font-style:oblique;
+	  line-height:20px;
+	  display:block;}
+.middle_right{width:65%;                                   /*middle右侧区域样式div*/
+              height:auto;
+			  float:right;
+			  
+			  }
+.middle_top2{width:100%;
+             height:260px;
+			 margin:-20px 0;
+			 padding:10px 10px;
+			 }
+#t5{font-family:Arial;                                    /*Welcome字体样式css*/
+    font-size:32px;
+	}
+#t6{font-family:宋体;                                     /*商务安全中心字体样式css*/
+    font-size:28px;}
+#t7{font-family:宋体;                                      /*段落字体内容样式css*/
+    font-size:16px;
+	line-height:20px;
+	letter-spacing:2px;}
+#first{float:left;                                          /*段落首字符下沉*/
+       font-size:32px;
+	   font-weight:bold;} 
+.right_line{width:98%;                                        /*右侧虚线区域div*/
+            height:10px;
+			
+            padding:0 20px 0 10px;
+			}
+.right_bottom{width:100%;                                     /*右侧服务大div*/
+              height:420px;
+			  background:#ff9900;
+			  }
+.bottom_top{width:96%;                                        /*服务字体div*/
+            height:40px;
+			
+			padding:10px 10px;
+			}
+.bottom_tupian{width:100%;                                    /*放置图片文字div*/
+               height:360px;
+			   
+			   }
+.tupian_left{width:300px;                                     /*左侧图片div*/
+             height:360px;
+			 
+			 float:left;
+			 margin:0 5px 0 0;}
+.tupian_right{width:300px;                                    /*右侧图片div*/
+              height:360px;
+	
+			  float:right;
+			  margin:0 0 0 5px;}
+.bottom{width:100%;                                           /*页面底部区域div*/
+        height:60px;
+		background:#000000;
+		clear:both;
+		text-align:center;
+		line-height:60px;}
+#t8{font-size:20px;
+    font-family:楷体;
+	color:#ffffff;
+	}
+
+
+
+
+

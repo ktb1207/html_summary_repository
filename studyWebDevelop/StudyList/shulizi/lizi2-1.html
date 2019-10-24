@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 2行3列的表格 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body >
+ <!-- 2行3列的简单练习 -->
+ <table border="2" bgcolor="#ccff99" bordercolor="#ff0000" width="300" height="8" cellpadding="8" cellspacing="4">
+ <caption align="center" valign="top">这是一个2行3列的单元格</caption>
+ <tr>
+   <td>1行1列</td>
+   <td>1行2列</td>
+   <td>1行3列</td>
+ </tr>
+ <tr>
+   <td>2行1列</td>
+   <td>2行2列</td>
+   <td>2行3列</td>
+ </tr>
+ </table>
+ <hr size="4" color="#000000">
+ <!-- 跨行的练习 -->
+ <table border="3" bgcolor="#ffff00" bordercolor="#ff3300" width="380" height="10" align="center">
+ <caption align="left" valign="bottom">跨行rowspan的练习</caption>
+ <tr>
+   <td rowspan="2">科技类图书</td>
+   <td>航天系列</td>
+   <td>3000</td>
+ </tr>
+ <tr>
+   <!-- 由于第一行夸2行，所以第二行的第一列被占用，不写！ -->
+   <td>远洋系列</td>  
+   <td>4000</td>
+ </tr>
+ <tr>
+   <td rowspan="2">美食类图书</td>
+   <td>川菜系列</td>
+   <td>3000</td>
+ </tr>
+ <tr>
+   <!-- 由于第一行夸2行，所以第二行的第一列被占用，不写！ -->
+   <td>粤菜系列</td>
+   <td>5000</td>
+ </tr>
+ </table>
+ <hr size="4" color="#000000">
+ <!-- 夸列的练习 -->
+ <table border="4" bgcolor="#666600" bordercolor="#3300ff" width="360" height="10" align="right">
+ <caption align="right">跨多列colspan的练习</caption>
+ <tr>
+   <td colspan="3">图书分类销量 </td>
+ </tr>
+ <tr>
+   <td colspan="2">科技类图书</td>
+   <td>7000</td>
+ </tr>
+ <tr>
+   <td colspan="2">美食类图书</td>
+   <td>8000</td>
+ </tr>
+
+
+
+ </table>
+ </body>
+</html>

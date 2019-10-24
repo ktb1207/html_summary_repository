@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>提交审核信息</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<style>
+	.upload-list .upload_action .fileImage {opacity: 0;position: absolute;left: 0;top: 0;width: 100%;height:100%;}
+</style>
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/util/utils.js"></script>
+<script type="text/javascript" src="../js/widget/uploadFile.js"></script>
+<script type="text/javascript" src="../js/widget/controls.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/util/url.js"></script>
+<script type="text/javascript" src="../js/custom/gyCheckInfo.js"></script>
+</head>
+<body>
+<!-- con start-->
+<div class="s_report">
+	<!-- 收款人信息 start-->
+	<div id="div_payee">
+		<h3 class="s_qtit">收款人信息<span></span></h3>
+		<div class="s_dl s_dl2">
+			<dl>
+				<dt class="lef4">收款人真实姓名</dt>
+				<dd class="mid">
+					<input id="txt_payee_trueName" data-role="none" placeholder="请输入真实姓名" type="text"/>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="lef4">收款人身份证号</dt>
+				<dd class="mid">
+					<input id="txt_payee_IDCard" data-role="none" placeholder="请输入身份证号" type="text" />
+				</dd>
+			</dl>
+			<dl>
+				<dt class="lef4">收款人联系电话</dt>
+				<dd class="mid">
+					<input id="txt_payee_tele" data-role="none" placeholder="请输入联系电话"  type="text"/>
+				</dd>
+			</dl>
+		</div>
+	
+		<div class="g_ch">
+			<!-- 上传图片 start-->
+			<div class="s_upload">
+				<p class="s_up_js"><b>手持身份证照片</b></p>
+		        <ul class="upload-list">
+		            <li class="upload_action">
+						<img src="../image/upload_1.png" width="100%" />
+						<input type="file"  id="file_payee_IDCardImg" class="fileImage" name=""/>
+					</li>
+					<li>
+						<img src="../image/s_sfz.jpg" width="100%" />
+					</li>
+		        </ul>
+		        <p>身份证上的所有信息清晰可见，必须能看见证件号。</p>
+		    </div>
+		    <!-- 上传图片 end-->
+		</div>
+	</div>
+	<!-- 收款人信息 end-->
+	
+	<!-- 收款人银行卡 start-->
+	<div id="div_bankCard" class="g_bank">
+		<h3 class="s_qtit">收款人银行卡</h3>
+		<!-- 银行卡list start-->
+		<div id="bankcardlist">
+		</div>
+		<!-- 银行卡list end-->
+		<!-- 添加 start-->
+		<dl class="s_gz" id="addbankcard">
+			<dt class="one">
+				<i></i>
+			</dt>
+			<dd class="mid">添加银行卡</dd>
+			<dd class="rig"><i class="arrow"></i></dd>
+		</dl>
+		<!-- 添加 end-->
+	</div>
+	<!-- 收款人银行卡  end-->
+	
+	<!-- 受捐人信息  start-->
+	<div id="div_donor">
+		<h3 class="s_qtit">受捐人信息</h3>
+		<div class="s_dl s_dl2">
+			<dl>
+				<dt class="lef4">受捐人真实姓名</dt>
+				<dd class="mid">
+					<input id="txt_donor_trueName" data-role="none" placeholder="请输入真实姓名"  type="text" />
+				</dd>
+			</dl>
+			<dl>
+				<dt class="lef4">受捐人身份证号</dt>
+				<dd class="mid">
+					<input id="txt_donor_IDCard" data-role="none" placeholder="请输入身份证号" type="text" />
+				</dd>
+			</dl>
+		</div>
+		
+		<!-- 上传身份证 start-->
+		<div class="g_ch">
+			<!-- 上传图片 start-->
+			<div class="s_upload">
+				<p class="s_up_js"><b>手持身份证照片</b></p>
+		        <ul class="upload-list">
+		            <li class="upload_action">
+						<img src="../image/upload_1.png" width="100%" />
+						<input type="file" accept="image/jpg,image/jpeg,image/png,image/gif" id="file_donor_IDCardImg" class="fileImage" name=""/>
+					</li>
+					<li>
+						<img src="../image/s_sfz.jpg" width="100%" />
+					</li>
+		        </ul>
+		        <p>1、身份证上的所有信息清晰可见，必须能看见证件号。</p>
+		        <p>2、若受捐人因病情原因不能拍照，由直系亲属手持本人身份证和受捐人身份证同时拍照。</p>
+		        <p>3、若受捐人为儿童，则需要提供出生证明。</a></p>
+		    </div>
+		    <!-- 上传图片 end-->
+		</div>
+		<!-- 上传身份证 end-->
+	</div>
+
+	<!-- 结婚证 start-->
+	<div id="div_marry" class="g_ch s_box">
+		<!-- 上传图片 start-->
+		<div class="s_upload">
+			<p class="s_up_js"><b>结婚证照片</b></p>
+	        <ul class="upload-list">
+	            <li class="upload_action">
+					<img src="../image/upload_1.png" width="100%" />
+					<input type="file" id="file_Marry_Img" class="fileImage" name=""  multiple="multiple"  />
+				</li>
+				
+	        </ul>
+	        <p>请提供您与受捐人的结婚证。</a></p>
+	    </div>
+	    <!-- 上传图片 end-->
+	</div>
+	<!-- 结婚证 end-->
+	
+	<!-- 受捐人委托书 start-->
+	<div id="div_proxy" class="g_ch s_box">
+		<!-- 上传图片 start-->
+		<div class="s_upload">
+			<p class="s_up_js"><b>受捐人委托书</b></p>
+	        <ul class="upload-list">
+	            <li class="upload_action">
+					<img src="../image/upload_1.png" width="100%" />
+					<input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png,image/gif" id="file_proxy_Img" class="fileImage" name=""/>
+				</li>
+				
+	        </ul>
+	        
+	    </div>
+	    <!-- 上传图片 end-->
+	</div>
+	<!-- 受捐人委托书 end-->
+	
+	<!-- 户口本照片 start-->
+	<div id="div_account" class="s_box">
+		<div class="s_upload">
+			<p class="s_up_js"><b>户口本照片</b></p>
+		    <ul class="upload-list">
+		        <li class="upload_action">
+					<img src="../image/upload_1.png" width="100%" />
+					<input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png,image/gif" id="file_payee_account" class="fileImage" name=""/>
+				</li>
+		    </ul>
+		    <p>多张：户口本首页，受捐人页，收款人页等，受捐人为未报户口的儿童上传出生证明。</p>
+		</div>
+	</div>
+	<!-- 户口本照片 end-->
+	<!-- 受捐人信息  end-->
+	
+	<!-- 项目医疗 start-->
+	<div id="div_medical" class="g_doc">
+		<dl class="comdl comdl2 last">
+			<dt>项目为医疗救助</dt>
+			<dd>		
+				<input id="nswitch" type="hidden" data-role="flipswitch" name="flip-checkbox"/>
+			</dd>
+		</dl>
+		<!-- 上传图片 start-->
+		<div id ="nswitch_pic" class="s_upload">
+			<p class="s_up_js"><b>医疗诊断结果</b>(必须提供)</p>
+	        <ul class="upload-list">
+	            <li class="upload_action">
+					<img src="../image/upload_1.png" width="100%" />
+					<input  type="file"  id="file_medical" class="fileImage" name="" multiple="multiple" />						
+				</li>
+				<li>
+					<img src="../image/s_sfz2.jpg" width="100%" />
+				</li>
+	        </ul>
+	        <p>请提交医疗诊断结果：《诊断证明书》《住院病案首页》《出院小结》至少提供之一，证件上的信息清晰可见，必须能看到诊断号必须有医院公章。（最多9张）</p>
+	    </div>
+ 
+	    <!-- 上传图片 end-->
+</div>
+	<!-- 项目医疗 end-->
+</div>
+<!-- con end-->
+<!-- tip begin-->
+<div id="tip_item" class="l_ban" hidden="true">
+	<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+</div>
+<!-- tip end-->
+<!-- btn start-->
+<div class="s_bm">
+	<a id="a_sub" class="btn">提交验证</a>
+	<a id="do_back" class="btn btn2">返回</a>
+</div>
+<!-- btn end-->
+</body>
+</html>

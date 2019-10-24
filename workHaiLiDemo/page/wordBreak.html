@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>文本换行控制</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<style type="text/css">
+			.wrap_div{width:100%;height:100%;background-color:#F3F5F7;padding:0 1.4rem;}
+			.dis_txt{font-size:1.4rem;color:#008000;margin: 1.2rem 0;}
+			.demo1{width:100%;line-height:1.8rem;background-color: #DEB887;color:#333333;font-size:1.4rem;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+			/*只在谷歌浏览器有效*/
+			.demo2{width:100%;line-height:1.8rem;background-color:#DEB887;color:#333333;font-size:1.4rem;overflow: hidden;
+				display:-webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;
+			}
+			/*兼容性显示*/
+			.demo3{
+				width:100%;max-height:5.4rem;line-height:1.8rem;background-color:#DEB887;color:#333333;font-size:1.4rem;overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.demo4{width:100%;line-height:1.8rem;background-color:#FFFFFF;color:#333333;font-size:1.4rem;letter-spacing: 0.1rem;}
+			.fix_btm{width:100%;height:2.4rem;position:fixed;left:0;bottom:0}
+			.txt_input{width:60%;height:2.2rem;border:0.1rem solid #666666;color:#333333;font-size:1.4rem;}
+			.txt_input:focus{border:0.1rem solid #ADD8E6;background-color:#87CEFA;}
+			.sure{width:20%;height:2.4rem;border:0.1rem solid #008000;background-color:#000000;color:#FFFFFF;outline: none;}
+			.more{text-align: right;color:#32BEFF;font-size:1.2rem;display:none;}
+		</style>
+		<script src="../js/lib/zepto.js"></script>	
+		<script src="../js/lib/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $q = jQuery.noConflict(); 
+				var inputTxt;
+				$("#sure").on("tap",function(){
+					inputTxt = $(".txt_input").val();
+					var lng = inputTxt.length;
+					var selectDiv = $(".demo4");
+					if(lng==0){
+						alert("输入文本不能为空");
+					}else{
+						addMore(inputTxt,selectDiv);
+					}
+				});
+				
+				function addMore(txt,obj){
+					var ftxt = txt;
+					var stxt = '';
+					var obj = obj;
+					console.log(ftxt.length);
+					if(ftxt.length<60){
+						obj.html(ftxt);
+					}else{
+						stxt = ftxt.substring(0,60);
+						obj.html(stxt);
+						$(".more").css("display","block");
+					}
+				}
+				
+				$(".more").on("tap",function(){
+					var state = $(this).html();
+					if(state=="点击展开"){
+						$(this).html("收起");
+						$(".demo4").html('');
+						$(".demo4").html(inputTxt);
+					}else{
+						$(this).html("点击展开");
+						$(".demo4").html('');
+						$(".demo4").html(inputTxt.substring(0,60));
+					}
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrap_div">
+			<p class="dis_txt">1.单行文本不换行，超出省略显示</p>
+			<div class="demo1">当我孤独的时候还可以抱着你那该有多幸运，当我寂寞的时候还可以想着你那该有多幸福。</div>
+			<p class="dis_txt">2.允许最多三行文显示，超出省略显示</p>
+			<div class="demo2">
+				如果不小心伤害了你，你不要太伤心，因为我真的不是故意让你受委屈；如果我得到你的人却得不到你的心，就算得到全世界也不开心，如果我失去这一切能换来你的真心，就算失去全世界也不伤心。
+			</div>
+			<p class="dis_txt">3.允许最多三行显示(兼容),超出省略显示</p>
+			<div class="demo3">
+				关于你们之间的故事，你总有牵强的解释，我不再想听你的毒誓，因为这已不是第一次，你把谎言精心的编织，我不想再被你伤一次，早已听惯了你的滥调陈词，现在回头算不算太迟。
+			</div>
+			<p class="dis_txt">4.展开收起</p>
+			<div class="de4_wrap">
+				<div class="demo4">
+					
+				</div>
+				<p class="more">点击展开</p>
+			</div>
+			
+			<div class="fix_btm">
+				<input type="text" name="txt" placeholder="请输入..." class="txt_input">
+				<input type="button" value="sure" class="sure" id="sure">
+			</div>
+		</div>
+	</body>
+</html>

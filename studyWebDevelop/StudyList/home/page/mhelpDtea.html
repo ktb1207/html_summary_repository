@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>帮助详情-葫芦藤</title>
+	<!--关闭按钮样式-->
+	<style>
+		.m_help{
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		.m_help button{
+			position: absolute;
+			right: 0;
+			top:20%;
+		}
+	</style>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+	<script src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/utils.js"></script>
+	<script>
+		$(function(){
+			//获取url中的参数
+			var paras = utils.url_getParameter();
+			var flag = paras["flag"];
+
+			$("button").click(function() {
+				if(typeof(flag) != "undefined") {
+					window.location.href = "mhelpCenter.html?flag=" + flag;
+				}
+			})
+		})
+
+		
+	</script>
+</head>
+<body style="background-color: #fff;">
+
+
+<!-- header start-->
+
+<!-- header end-->
+
+<!-- item start-->
+<div class="m_help">
+	<h2 class="m_tit">金额达到了为何钱包余额为0?</h2>
+
+	<p class="m_txt">众筹金额达到设定目标但钱包余额为0的情况是因为发起项目设
+定的筹款日期还没到达，项目还处于筹资阶段，因为钱包余额中
+不包含本次众筹的金额。</p>
+</div>
+<!-- item end-->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 倒序数组 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	var array1 = new Array();
+		array1[0]="aa";
+		array1[1]="ab";
+		array1[2]="ac";
+		array1[3]="ad";
+		array1[4]="ae";
+		array1[5]="af";
+	//alert(array1.length);
+	var newArray = new Array();
+	for(var i=array1.length-1; i>=0; i--){
+		newArray.push(array1[i]);
+	};
+	document.write("原数组为："+array1+"<br>");
+	document.write("倒序的数组为："+newArray+"<br>");
+	//构造函数实现数组查找元素
+	function myFunction(vitem,istart){
+		if(istart==null){
+			istart=0;
+		}
+		for(var i=istart;i<this.length;i++){
+			if(this[i]==vitem){
+				return i;
+			}
+
+		}
+		return -1;
+	};
+	Array.prototype.indexOf=myFunction;
+	alert(array1.indexOf("ac",1));
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

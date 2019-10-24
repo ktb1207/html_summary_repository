@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>滚动播放图片 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	var picArr=new Array("aa.jpg","bb.jpg","cc.jpg","dd.jpg");
+	var index=0;
+	//window.onload=auto();		//页面加载完成自动播放
+	//下一张
+	function next(){
+		index++;
+		if(index==picArr.length){
+			index=0;
+		}
+		
+		document.getElementById("img").src=picArr[index];
+	}
+	//上一个
+	function previous(){
+		index--;
+		if(index<0){
+			index=picArr.length-1;
+		}
+		
+		document.getElementById("img").src=picArr[index];
+	}
+	//自动
+	function auto(){
+		myInterval=window.setInterval("next()",1000);
+	}
+	//取消自动
+	function clearAuto(){
+		window.clearInterval(myInterval);
+	}
+
+  </script>
+ </head>
+
+ <body>
+	<img id="img" src="aa.jpg" width="500" height="300"> <br>
+	<input type="button" value="播放上一张" onclick="previous()"> 
+	<input type="button" value="播放下一张" onclick="next()"> 
+	<input type="button" value="自动播放" onclick="auto()"> 
+	<input type="button" value="暂停播放" onclick="clearAuto()"> 
+ </body>
+</html>

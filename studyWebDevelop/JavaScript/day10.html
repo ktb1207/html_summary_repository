@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 多维数组显示</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//创建数组
+	var myArray=new Array(3);
+	//将数组元素创建为数组
+	 myArray[0]=new Array(3);
+	 myArray[1]=new Array(3);
+	 myArray[2]=new Array(3);
+    //给数组元素赋值
+	myArray[0][0]="A1";
+	myArray[0][1]="A2";
+	myArray[0][2]="A3";
+	myArray[1][0]="B1";
+	myArray[1][1]="B2";
+	myArray[1][2]="B3";
+	myArray[2][0]="C1";
+	myArray[2][1]="C2";
+	myArray[2][2]="C3";
+	//依次显示数组元素
+	for(var i=0;i<myArray.length;i++)
+	{
+		for(var j=0;j<myArray.length;j++)
+		{
+			document.write("数组元素（"+i","+j"为）"+myArray[i][j]+"");
+			
+		}
+		document.write("<br>");
+	}
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

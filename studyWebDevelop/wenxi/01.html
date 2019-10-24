@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 复习 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" language="javascript">
+	function myFunction(){
+		//获取文本内容
+		var sString=document.myForm.myText.value;
+		//使用if条件语句判断文本框内容的正确性
+		if(sString!="疑是地上霜"){
+			alert("填写错误，请重新填写！");
+			document.myForm.myText.select();
+		}
+	}
+  </script>
+ </head>
+
+ <body>
+	<h2>单行文本框select方法</h2> 
+	<form name="myForm">
+		窗前明月光，<input type="text" name="myText" value="疑是地上霜"> <br>
+		<input type="button" value="测试" onclick="myFunction()">
+	</form>
+ </body>
+</html>

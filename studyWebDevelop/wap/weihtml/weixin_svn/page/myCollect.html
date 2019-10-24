@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>自助洗衣收藏</title>
+		<link type="text/css" rel="stylesheet" href="../css/wx.css"/>
+		<script src="../js/lib/zepto.js"></script>
+		<script src="../js/lib/iscroll.js"></script>
+		<script src="../js/method/des.js"></script>
+		<script src="../js/method/base.js"></script>
+		<script src="../js/custorm/myCollect.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--top start-->
+			<div class="my_top">
+				<i class="my_tl" id="jump_back"></i>
+				<h1 class="my_tittle">自助洗衣</h1>
+			</div>
+			<!--top end-->
+			<!--select start-->
+			<div class="my_select">
+				<ul id="type_select">
+					<li style="border-right:1px solid #ccc">洗衣点</li>
+					<li>洗衣机</li>
+				</ul>
+			</div>
+			<!--select end-->
+			
+			<div class="my_conter wrapper" id="wrapper">
+				
+				<div id="scroller" class="scroller">
+					
+					<div class="scroller-pullDown" id="scroller-pullDown">
+           				<span id = "down-icon" class = "icon-double-angle-down pull-down-icon"></span>
+            			<span id = "pullDown-msg" class = "pull-down-msg">下拉刷新</span>
+        			</div>
+        			
+        			<ul id="mystore">
+						<!--
+							<li>万达广场12</li>
+						-->	
+						
+						
+					</ul>
+					
+					<div class="scroller-pullUp" id="scroller-pullUp">
+            			<span id = "up-icon" class = "icon-double-angle-up pull-up-icon"></span>
+            			<span id = "pullUp-msg" class = "pull-up-msg">上拉刷新</span>
+       				</div>	
+       				
+				</div>	
+				
+			</div>
+			
+			
+			
+			<!--no data start-->
+				<div class="ne_nodata">暂无收藏记录</div>
+			<!--no data end-->
+		</div>                          <!--wrap-->                                   
+	</body>
+</html>

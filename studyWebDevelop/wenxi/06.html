@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>准备 </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+	//生成10到100之间的随机数
+	function myrandom(num1,num2){
+		var Number1=num2-num1+1;
+		var Number2=Math.random()*Number1+num1;
+		var Number3=Math.floor(Number2);
+		return Number3;
+	}
+	for(var i=0;i<10;i++){
+		var x=myrandom(10,100);
+		document.write("生成的第"+i+"为随机数为："+x+"<br>");
+	}
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

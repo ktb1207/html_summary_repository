@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>Document对象设置超链接颜色 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义函数实现链接颜色改变
+	function myFunction(){
+		document.linkColor=document.myForm.linkc.value;		//未访问
+		document.alinkColor=document.myForm.alink.value;	//活动
+		document.vlinkColor=document.myForm.vlink.value;	//已访问
+	}
+  </script>
+ </head>
+
+ <body>
+  <h1>不同状态超链接颜色</h1>
+  <form action="" method="post" name="myForm">
+	未访问超链接颜色:<input type="text" name="linkc" value="yellow"> <br>
+	正活动超链接颜色:<input type="text" name="alink" value="red"> <br>
+	已访问超链接颜色:<input type="text" name="vlink" value="blue"> <br>
+  </form>
+ </body>
+</html>

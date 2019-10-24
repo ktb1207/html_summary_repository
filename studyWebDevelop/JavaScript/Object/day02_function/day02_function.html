@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>为Object对象添加方法</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" src="person.js"></script>
+ </head>
+
+ <body>
+	<p>
+		Person<input type="text" size="10" id="personState" name="personState">,Speed:
+		<label>
+		<input type="text" size="10" id="personSpeed" name="personSpeed">
+		</label>M/S
+	</p> 
+	<p>
+		<input type="button" value="walk" onclick="person.walk();
+			personState.value=person.state;personSpeed.value=person.speed;" >
+		<input type="button" value="faster" onclick="person.faster();
+			personState.value=person.state;personSpeed.value=person.speed;">
+		<input type="button" value="slower" onclick="person.slower();
+			personState.value=person.state;personSpeed.value=person.speed;">
+		<input type="button" value="stop" onclick="person.stopwalking();
+			personState.value=person.state;personSpeed.value=person.speed;">
+	</p>
+ </body>
+</html>

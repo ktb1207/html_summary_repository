@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>公益主页</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/util/url.js"></script>
+<script type="text/javascript" src="../js/util/utils.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/util/common.js"></script>
+<script type="text/javascript" src="../js/util/pic.js"></script>
+<script type="text/javascript" src="../js/custom/gyIndex.js"></script>
+</head>
+<body>
+<!-- header start-->
+<!--<header class="head">
+	<a class="h_back"><i></i></a>
+	<span>我的公益主页-葫芦藤</span>
+	<a class="h_share"></a>
+</header>-->
+<!-- header end-->
+<!-- ban start-->
+<div class="x_ban s_ban2">
+	<img src="../image/s_ban2.png" width="100%" />
+</div>
+<!--tip_say start-->
+<div id="tip_item" class="l_ban" hidden="true">
+	<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+</div>
+<!--tip_say end-->
+<!-- ban end-->
+<!-- Info start-->
+<div class="g_info">
+	<dl class="g_t">
+		<dt>
+			<img  id="v_user_pic" src=""  width="100%" style="max-height:3.0rem"/>
+		</dt>
+		<dd>
+			<h3 id="v_user_alias"></h3>
+			<p></p>
+		</dd>
+	</dl>
+	
+	
+	<div class="g_line"><div></div></div>
+	
+</div>
+<!-- Info end-->
+<!-- nav start-->
+<div class="g_mm">
+	<ul class="g_tab">
+		<li data-id="3" class="first on">我发起的</li>
+		<li data-id="5">我捐助的</li>
+		<li data-id="4">我关注的</li>
+	</ul>
+</div>
+<!-- nav end-->
+
+<!-- 项目详情 start-->
+<div id="div_ProDetail">
+	<!--
+	 <div class="s_box s_deta">
+		<dl class="s_info">
+			<dt>
+				<img src="../image/pro/pro3.jpg" width="100%" />
+			</dt>
+			<dd>
+				<b>忘忧草</b>	
+				<p><time>两周前</time></p>
+				<a class="g_man"></a>
+			</dd>
+		</dl>
+		<div class="s_dc">
+			<h2 class="s_dtit">
+				<span>已成功</span>
+				关注留守儿童
+			</h2>
+			<p class="s_js">轻轻摇晃高脚玻璃杯中的浅玫瑰色液汁，一缕说不准是醇香、果香、清香浓缩而成的葡萄酒特有香气，朴鼻而来沁人肺腑。</p>
+		</div>
+		<ul class="s_pic">
+			<li class="first">
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+			<li>
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+			<li>
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+			<li>
+				<a><img src="../image/pro/pro4.jpg" /></a>
+			</li>
+		</ul>
+		<ul class="s_num">
+			<li>目标<span>￥2000</span></li>
+			<li>已筹<span>￥2000</span></li>
+			<li>支持<span>90次</span></li>
+		</ul>
+	</div> -->
+</div>
+
+<!-- 项目详情 end-->
+
+<!-- btn start-->
+
+<!--空div用来消除底部导航的遮盖-->
+<div style="height:2.7rem;width:100%;background-color:#f7f7f9"></div>
+<!-- menu start-->
+<div class="s_menu" id="do_bottom">
+	<ul>
+		<li id="do_bottom_01">
+			<i class="home"></i>
+			<p>首页</p>
+		</li>
+		<li id="do_bottom_02">
+			<i class="fb"></i>
+			<p>发起</p>
+		</li>
+		<li id="do_bottom_03" class ="on">
+			<i class="love"></i>
+			<p>公益主页</p>
+		</li>
+		<li id="do_bottom_04">
+			<i class="my"></i>
+			<p>我</p>
+		</li>
+	</ul>
+</div>
+<!-- menu end-->
+<!-- btn end-->
+<!-- panel start-->
+<div class="g_panel" style="display:none;">
+	<h3>项目管理</h3>
+	<ul>
+		<li >
+			<i class="pan1" id="li_new"></i>
+			<p>更新进度</p>
+		</li>
+		
+		<li id="li_check">
+			<i class="pan3"></i>
+			<p>提现验证</p>
+		</li>
+		<li id="li_over">
+			<i class="pan4"></i>
+			<p>提前结束</p>
+		</li>
+		<li>
+			<i class="pan5" id="li_help"></i>
+			<p>使用帮助</p>
+		</li>
+	</ul>
+</div>
+<!-- panel end-->
+<!-- messagebox start-->
+<div class="pop" style="display:none;">
+	<div id="Dialog1" class="dialog">
+		<a class="d-close"><i></i></a>
+		<h3>提前结束项目确认</h3>
+		<div class="d-inf">
+			<p class="d-tip">项目提前结束申请通过后将停止接受捐款</p>
+		</div>
+		<div class="d-btn">
+			<a id="a_projOver_cancel">取消</a>
+			<a id="a_projOver_ok">确定</a>
+		</div>
+	</div>
+</div>
+<!-- messagebox end-->
+</body>
+</html>

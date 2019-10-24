@@ -1,0 +1,275 @@
+
+*{
+	margin:0px;
+	padding:0px;
+}
+/*************************外层DIV样式********************************************/
+.wrap{
+	width:200px;
+	height:420px;
+	position:absolute;
+	left:20px;
+	top:100px;
+	background:#66cc00;
+}
+/*************************班级管理DIV*********************************************/
+.cc{
+	width:auto;
+	height:36px;
+	margin:30px 0 0 10px;
+	background:#66cc00;
+	font-size:24px;
+	line-height:30px;
+	border-bottom:1px dashed #ffffff;
+	font-weight:bold;
+	
+}
+/*班级管理链接样式*/
+.cc a:link,a:visited{
+	text-decoration:none;
+	color:#000000;
+}
+.cc a:hover{
+	color:#ffffff;
+	display:block;
+	background:#669900;
+}
+
+/*班级信息管理*/
+#ccs{
+	width:auto;
+	height:auto;
+	margin:0 auto;
+	background:#66cc00;
+	font-size:18px;
+	padding:0 10px 0 50px;
+	line-height:30px;
+	display:none;
+	border-left:2px solid #000000;
+	margin:0 0 0 10px;
+}
+#ccs ul li{
+	list-style:none;
+}
+/********************************视频管理DIV****************************************/
+.vv{
+	width:auto;
+	height:36px;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:24px;
+	line-height:30px;	
+	font-weight:bold;
+	border-bottom:1px dashed #ffffff;
+}
+/*视频管理链接样式*/
+.vv a:link,a:visited{
+	text-decoration:none;
+	color:#000000;
+}
+.vv a:hover{
+	color:#ffffff;
+	display:block;
+	background:#669900;
+}
+/*视频信息管理*/
+#vvs{
+	width:auto;
+	height:auto;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:18px;
+	padding:0 10px 0 50px;
+	line-height:30px;
+	display:none;
+	border-left:2px solid #000000;
+}
+
+#vvs ul li{
+	list-style:none;
+}
+/**************************************权限管理*******************/
+.qq{
+	width:auto;
+	height:36px;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:24px;
+	line-height:30px;	
+	font-weight:bold;
+	border-bottom:1px dashed #ffffff;
+}
+/*权限管理链接样式*/
+.qq a:link,a:visited{
+	text-decoration:none;
+	color:#000000;
+}
+.qq a:hover{
+	color:#ffffff;
+	display:block;
+	background:#669900;
+}
+/*权限管理*/
+#qqs{
+	width:auto;
+	height:auto;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:18px;
+	padding:0 10px 0 50px;
+	line-height:30px;
+	display:none;
+	border-left:2px solid #000000;
+}
+
+#qqs ul li{
+	list-style:none;
+}
+/*********************************校务管理*************************/
+.xx{
+	width:auto;
+	height:36px;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:24px;
+	line-height:30px;	
+	font-weight:bold;
+	border-bottom:1px dashed #ffffff;
+}
+/*校务管理链接样式*/
+.xx a:link,a:visited{
+	text-decoration:none;
+	color:#000000;
+}
+.xx a:hover{
+	color:#ffffff;
+	display:block;
+	background:#669900;
+}
+/*校务管理*/
+#xxs{
+	width:auto;
+	height:auto;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:18px;
+	padding:0 10px 0 50px;
+	line-height:30px;
+	display:none;
+	border-left:2px solid #000000;
+}
+
+#xxs ul li{
+	list-style:none;
+}
+/*****************************账单管理***************************/
+.zz{
+	width:auto;
+	height:36px;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:24px;
+	line-height:30px;	
+	font-weight:bold;
+	border-bottom:1px dashed #ffffff;
+}
+/*账单管理链接样式*/
+.zz a:link,a:visited{
+	text-decoration:none;
+	color:#000000;
+}
+.zz a:hover{
+	color:#ffffff;
+	display:block;
+	background:#669900;
+}
+/*账单管理*/
+#zzs{
+	width:auto;
+	height:auto;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:18px;
+	padding:0 10px 0 30px;
+	line-height:30px;
+	display:none;
+	border-left:2px solid #000000;
+}
+
+#zzs ul li{
+	list-style:none;
+}
+/****************************收益统计***********************/
+.ss{
+	width:auto;
+	height:36px;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:24px;
+	line-height:30px;	
+	font-weight:bold;
+	border-bottom:1px dashed #ffffff;
+}
+/*收益统计链接样式*/
+.ss a:link,a:visited{
+	text-decoration:none;
+	color:#000000;
+}
+.ss a:hover{
+	color:#ffffff;
+	display:block;
+	background:#669900;
+}
+/*收益统计*/
+#sss{
+	width:auto;
+	height:auto;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:18px;
+	padding:0 10px 0 30px;
+	line-height:30px;
+	display:none;
+	border-left:2px solid #000000;
+}
+
+#sss ul li{
+	list-style:none;
+}
+/****************************系统设置*****************************/
+.tt{
+	width:auto;
+	height:36px;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:24px;
+	line-height:30px;	
+	font-weight:bold;
+	border-bottom:1px dashed #ffffff;
+}
+/*系统设置链接样式*/
+.tt a:link,a:visited{
+	text-decoration:none;
+	color:#000000;
+}
+.tt a:hover{
+	color:#ffffff;
+	display:block;
+	background:#669900;
+}
+/*系统设置*/
+#tts{
+	width:auto;
+	height:auto;
+	margin:0 0 0 10px;
+	background:#66cc00;
+	font-size:18px;
+	padding:0 10px 0 30px;
+	line-height:30px;
+	display:none;
+	border-left:2px solid #000000;
+}
+
+#tts ul li{
+	list-style:none;
+}

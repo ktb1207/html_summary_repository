@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 选择对话框confirm </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+	<script language="javascript" type="text/javascript">
+	//弹出选择对话框
+	function myfunction(){
+	//confirm("您的个人信息有可能被他人看到，是否确定提交？");
+	if(confirm("您的个人信息有可能被他人看到，是否确定提交？")){
+		alert("您的个人信息已经提交！");
+	}else{
+		alert("您取消了提交！");
+	}
+	}
+    </script>
+ </head>
+
+ <body>
+	<form action="" method="post" name="name1">
+		用户名：<input type="text" size="20" value="请输入用户名！"> <br>
+		密码：<input type="password" size="20" value="请输入密码！"> <br>
+		<input type="submit" value="确定" name="name2" onclick="myfunction()">
+		<input type="reset" value="重置" name="name3">
+	</form>
+ </body>
+</html>

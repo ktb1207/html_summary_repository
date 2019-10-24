@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>定时和取消定时</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//创建时间函数
+	function myFunction(){
+		var myDate=new Date();
+		var hour=myDate.getHours();
+		var minute=myDate.getMinutes();
+		var second=myDate.getSeconds();
+		//调整分钟显示
+		if(minute<10){
+			minute="0"+minute;
+		}
+		//调整秒显示
+		if(second<10){
+			second="0"+second;
+		}
+		var sString=hour+":"+minute+":"+second;
+		document.form.xunHuan.value=sString;
+		}
+	//取消循环定时
+	function myFunction2(){
+		window.clearInterval(myInterval);
+	}
+  </script>
+ </head>
+
+ <body>
+	<center><h2>定时和取消定时操作</h2></center>
+	<hr color="#ff0000">
+	<script language="javascript" type="text/javascript">
+		//设置循环定时
+		function myFunction3(){
+			myInterval=window.setInterval("myFunction()",1000);
+		}
+	</script>
+	<form action="" method="post" name="form">
+		<input type="text" name="xunHuan">  <hr>
+		<input type="button" value="开始" onclick=myFunction3()>
+		<input type="button" value="停止" onclick=myFunction2()>
+	</form>
+ </body>
+</html>

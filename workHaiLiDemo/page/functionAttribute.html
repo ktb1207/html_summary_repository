@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>函数属性</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+		</style>
+		<script src="../js/lib/zepto.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				/*function 属性*/
+				function addnum(num1,num2,num3,num4){
+					return num1+num2+num3+num4;
+				}
+				//1 length属性 - 访问函数定义形参个数
+				console.log(addnum.length);
+				//2 arguments属性-在函数调用时,会自动在该函数内部生成一个名为 arguments的隐藏对象。 该对象类似于数组， 但又不是数组。可以使用[]操作符获取函数调用时传递的实参。
+				function addbum(num1,num2,num3,num4){
+					if(arguments.length==addbum.length){
+						for(var i=0;i<arguments.length;i++){
+							console.log("传递第"+i+"个参数为"+arguments[i]+'');
+						}
+						return num1+num2+num3+num4;
+					}else{
+						return "getfalse";
+					}
+					
+				}
+				var backFun = addbum(1,2,3,4);
+				var backGun = addbum(1,2,3);
+				console.log(backFun);
+				console.log(backGun);
+				//3 arguments的callee属性-arguments的callee属性-返回正被执行的 Function对象，用来引用当前正在执行的函数，另外callee拥有length属性，arguments.length-实参长度；arguments.callee.length-形参长度
+				//例：打印其本身
+				function alterDemo(){
+					console.log(arguments.callee);
+				}
+				function acallee(ar1,ar2){
+					alterDemo();
+				}
+				acallee();
+				//4 caller属性-在一个函数调用另一个函数时，被调用函数会自动生成一个caller属性，指向调用它的函数对象。如果该函数当前未被调用，或并非被其他函数调用，则caller为null。
+				function testCaller(){
+					var tCaller = testCaller.caller;
+					console.log(tCaller);
+				}
+				//testCaller();
+				function testBack(){
+					testCaller();
+				}
+				testBack();
+				//5 函数动态调用方法 call()、apply()
+				/*call和apply都是为了改变某个函数运行时的 context 即上下文而存在的，换句话说，就是为了改变函数体内部 this 的指向。
+				 * 因为 JavaScript 的函数存在「定义时上下文」和「运行时上下文」以及「上下文是可以改变的」这样的概念。
+				 * 二者的作用完全一样，只是接受参数的方式不太一样。
+				 * call()像函数传递参数一样顺序传参
+				 * apply()接受数组形式传参
+				 * JavaScript 中，某个函数的参数数量是不固定的，因此要说适用条件的话，当你的参数是明确知道数量时，用 call，而不确定的时候，用 apply，然后把参数 push 进数组传递进去。当参数数量不确定时，函数内部也可以通过 arguments 这个数组来便利所有的参数。
+				*/
+				/*如：
+				 blackCat实例cat对象有say()方法，而对象whiteDog没有say()方法但是不想重新定义whiteDog对象的say()方法，则可以用blackCat的say()方法*/
+				function cat(){
+					
+				}
+				cat.prototype={
+					food:"fish",
+					say: function(){
+						console.log("I love "+this.food);
+					}
+				}
+				var blackCat = new cat;
+				blackCat.say();
+				var whiteDog = {food:"bone"};
+				blackCat.say.call(whiteDog);
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

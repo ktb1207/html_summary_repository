@@ -1,0 +1,88 @@
+/*************子菜单样式******************/
+#aaz,#bbz,#ccz,#ddz,#eez,#ffz,#ggz,#hhz,#kkz,#mmz{
+	display:none;
+	position:absolute;
+	left:200px;
+	top:0px;
+	width:500px;
+	height:500px;
+	background:#fff;
+}
+
+.zleft_top,.zright_top,.zleft_bot,.zright_bot{
+	float:left;
+	width:200px;
+	height:200px;
+	margin:20px 20px;
+	
+}
+
+.cur{
+	width:100px;
+	height:30px;
+	color:#4d4d4d;
+	background:#bbbbbb;
+	text-align:center;
+	line-height:30px;
+	cursor:pointer;
+	font-size:13px;
+	font-weight:bold;
+}
+#zaa,#zbb,#zcc,#zdd,#zee,#zff,#zgg,#zhh,#zkk,#zmm{
+	width:140px;
+	height:auto;
+	line-height:30px;
+	color:#4d4d4d;
+	font-size:24px;
+	padding:10px 0 0 10px;
+}
+#zaa a:link,#zaa a:visited{
+	color:#4d4d4d;
+	text-decoration:none;
+	font-size:18px;
+}
+
+#zaa a:hover{
+	color:blue;
+	text-decoration:underline;
+}
+#zbb a:link,#zbb a:visited{
+	color:#4d4d4d;
+	text-decoration:none;
+	font-size:18px;
+}
+#zbb a:hover{
+	color:blue;
+	text-decoration:underline;
+}
+#zcc a:link,#zcc a:visited{
+	color:#4d4d4d;
+	text-decoration:none;
+	font-size:18px;
+}
+#zcc a:hover{
+	color:blue;
+	text-decoration:underline;
+}
+#zdd a:link,#zdd a:visited{
+	color:#4d4d4d;
+	text-decoration:none;
+	font-size:18px;
+}
+#zdd a:hover{
+	color:blue;
+	text-decoration:underline;
+}
+#zee a:link,#zee a:visited{
+	color:#4d4d4d;
+	text-decoration:none;
+	font-size:18px;
+}
+#zee a:hover{
+	color:blue;
+	text-decoration:underline;
+}
+.ft{
+	font-size:18px;
+	color:#4d4d4d;
+}

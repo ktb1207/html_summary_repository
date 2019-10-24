@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Date对象计算 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//提示输入一个日期
+	var myTime=prompt("请输入一个时间");
+	var user_myTime=Date.parse(myTime);				//获取输入时间的毫秒值
+	document.write("<h3>输入时间的毫秒值为："+user_myTime);
+	//创建当前时间对象
+	var nowDate=new Date();
+	var user_nowDate=Date.parse(nowDate);			//获取当前时间的毫秒值
+	document.write("<h3>当前时间的毫秒值为："+user_nowDate);
+	//Date对象的计算
+	var dif_date=user_myTime-user_nowDate;
+	var days=Math.floor(dif_date/(1000*60*60*24));
+	document.write("<h3>计算和当前时间差为："+days);
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

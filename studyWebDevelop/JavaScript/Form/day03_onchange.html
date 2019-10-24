@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>文本框内容改变事件</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义onchange函数
+	function myFunction(){
+		alert("此文本框内容不许改变！");
+		document.myForm.reset();		//使用reset方法重置表单内容
+	}
+  </script>
+ </head>
+
+ <body>
+	<h1>单击“提交”按钮，如果文本框内容发生改变则触发onchange事件</h1>
+	<form name="myForm" action="" method="post">
+		<input type="text" name="myText" value="内容不允许改变！"
+			onchange="myFunction()"> <br>
+		<input type="submit" name="mySubmit" value="提交">
+	</form>
+ </body>
+</html>

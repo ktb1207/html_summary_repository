@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 列表对象onchange事件 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义内容改变函数
+	function myFunction(){
+		//获取被选中项数组下标
+		var nNumber=document.myForm.mySelect.selectedIndex;
+		switch(nNumber){
+			case 0:alert("您选择的是看书！");
+			break;
+			case 1:alert("您选择的是听歌！");
+			break;
+			case 2:alert("您选择的是上网！");
+			break;
+			case 3:alert("您选择的是看电影！");
+			break;
+			case 4:alert("您选择的是聊天！");
+			break;
+			case 5:alert("您选择的是聚会！");
+		}
+	}
+  </script>
+ </head>
+
+ <body>
+	<h1>选择项改变触发onchange事件</h1>
+	<hr size="2" color="#c0c0c0">
+	<form name="myForm">
+		<select size="1"  name="mySelect" onchange="myFunction()">
+			<option>看书</option>
+			<option>听歌</option>
+			<option>上网</option>
+			<option>看电影</option>
+			<option>聊天</option>
+			<option>聚会</option>
+		</select>
+	</form>
+ </body>
+</html>

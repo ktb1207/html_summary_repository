@@ -1,0 +1,91 @@
+
+/*
+//get()方式的三种传参
+//第一种方式，通过直接在url问号紧跟传参
+$('input').click(function(){
+		$.get('test.php?url=ycku',function(response,status,xhr){
+			$('#box').html(response);
+		});
+	});
+//第二种方式，通过第二个参数data，字符串形式的键值对传参
+$('input').click(function(){
+		$.get('test.php','url=ycku',function(response,status,xhr){
+			$('#box').html(response);
+		});
+	});
+//第三种方式，通过第二个参数data，对象形式的键值对传参
+$('input').click(function(){
+		$.get('test.php',{
+			url:'ycku'
+		},function(response,status,xhr){
+			$('#box').html(response);
+		});
+	});
+//post()方式的传参
+//第一post()传参不能使用问号传参
+$('input').click(function(){
+		$.post('test.php?url=ycku',function(response,status,xhr){
+			$('#box').html(response);
+		});
+	});
+//第二，post传参可以使用字符串形式的键值对传参
+$('input').click(function(){
+		$.post('test.php','url=ycku',function(response,status,xhr){
+			$('#box').html(response);
+		});
+	});
+//第三，post()传参可以使用对象形式的键值对传参
+$('input').click(function(){
+		$.post('test.php',{
+			url:'ycku'
+		},function(response,status,xhr){
+			$('#box').html(response);
+		});
+	});
+//get()和post()的第四个参数type,type的类型可以是text,html,script,json,xml
+//PHP返回的数据是纯文本，默认是html或text
+$('input').click(function(){
+		$.post('test.php',{
+			url:'ycku'
+		},function(response,status,xhr){
+			$('#box').html(response);
+		},'html');		//传递的第四个参数
+	});
+//本身是纯文本，如果强行按照json或者xml数据格式返回的话，就无法获取数据
+$('input').click(function(){
+		$.post('test.php',{
+			url:'ycku'
+		},function(response,status,xhr){
+			$('#box').html(response);
+		},'xml');
+	});
+//获取json文本
+$('input').click(function(){
+		$.post('test.json',function(response,status,xhr){
+			$('#box').html(response[0].url);
+		});	
+	});
+//第四个参数如果强行装换，则会获取文件的所有内容
+$('input').click(function(){
+		$.post('test.json',function(response,status,xhr){
+			$('#box').html(response);
+		},'html');	
+	});	//[ { "url":"www.ycku.com" } ]
+
+//gerJSON()方式
+$('input').click(function(){
+		$.getJSON('test.json',function(response,status,xhr){
+			$('#box').html(response[0].url);
+		});	
+	});
+*/
+
+
+$(function(){
+	
+		$('input').click(function(){
+			$.post('test.json',function(response,status,xhr){
+				$('#box').html(response[1].url);
+		});	
+	
+});

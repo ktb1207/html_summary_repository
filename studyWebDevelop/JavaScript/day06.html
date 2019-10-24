@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> number数值和Number数值对象 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	var nNumber1=123;                                  //直接赋值
+	var nNumber2=new Number(123);                      //定义Number对象
+	document.write("<h3>nNumber1的值为："+nNumber1);  //输出nNumber1的值
+    document.write("<h3>nNumber2的值为："+nNumber2);  //输出nNumber2的值
+	var nNumber3=typeof(nNumber1);					  //返回nNumber1的数据类型		
+	var nNumber4=typeof(nNumber2);                    //返回nNumber2的数据类型
+	document.write("<h3>nNumber1的数据类型为："+nNumber3);
+	document.write("<h3>nNumber2的数据类型为："+nNumber4);
+	var result=nNumber2.valueOf();                    //使用valueOf方法返回nNumber2的值
+	document.write("<h3>result的值为："+result);
+	var result1=typeof(result);                       //判断使用valueOf返回值得数据类型
+	document.write("<h3>使用valueOf方法返回的数据类型为："+result1);
+	var result2=nNumber2.toString();
+	document.write("<h3>result2的值为："+result2);
+	var result3=typeof(result2);
+	document.write("<h3>使用toString方法返回的数据类型为："+result3);
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

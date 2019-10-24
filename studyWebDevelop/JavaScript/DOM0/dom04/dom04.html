@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>DOM操作表格及样式 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" src="dom04.js"></script>
+ </head>
+
+ <body>
+	<table border="1" width="300">
+		<caption>人员表</caption>   <!-- 表格标题，只能有一个 -->
+		<thead>						<!-- 表头,一个表格只能有一个表头标签 -->
+			<tr>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>年龄</th>
+			</tr>
+		</thead>
+		<tbody>						<!-- 表体，可以有多个 -->
+			<tr>
+				<td>张三</td>
+				<td>男</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>李四</td>
+				<td>女</td>
+				<td>22</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">合计：20人</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr size="4" color="#00000000">
+ </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>键盘事件 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义键盘按下事件函数
+	function myFunction1(){
+		document.myForm.text1.value="发生键盘按下事件";	
+	}
+	//定义鼠键盘起事件函数
+	function myFunction2(){
+		document.myForm.text2.value="发生键盘弹起事件";	
+	}
+  </script>
+ </head>
+
+ <body>
+	<h1>键盘按下和弹起时间的操作</h1>
+	<script language="javascript" type="text/javascript">
+		/*document.onmousedown=myFunction1;*/
+		document.onkeyup=myFunction2;
+	</script>
+	<form action="" method="post" name="myForm">
+		<input type="text" name="text1" onkeydown="myFunction1()">
+		<input type="text" name="text2" >
+	</form>
+ </body>
+</html>

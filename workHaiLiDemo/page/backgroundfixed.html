@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>qq</title>
+		<style type="text/css">
+			body,h1,h2,h3,h4,p,ul,ol,dl,dt,dd,form,input,select,span,p,strong,em,div{margin:0;padding:0;}
+			body{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+			img{border:none;vertical-align:top;}
+			body{font-family:"方正黑体简体";font-size-adjust: none;-webkit-text-size-adjust:none;}
+			body,html{height: 100%;width: 100%;}
+			html{font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+			div{box-sizing:border-box;}
+			@media only screen and (min-width:990px) {
+				html{font-size:87.5%}
+			}
+			@media only screen and (max-width:300px) {
+			    html{font-size:40%}
+			}
+			body{background-image: url(../img/bgfixed.jpg);background-size:auto 100%;background-repeat: no-repeat;background-attachment: fixed;}
+			.top{width:100%;height:230px;background-color:#000;position:fixed;top:0;left:0;z-index:4;opacity: 0.8;}
+			.top_cile{height:12.0rem;width:12.0rem;background-image:url(../img/huanzi.jpg);background-size:cover;margin:1.4rem auto;border-radius: 6.0rem;-moz-border-radius: 6.0rem;-webkit-border-radius: 6.0rem;
+					border:2px solid #fff;
+					-webkit-animation:run 16s linear 0s infinite;
+					animation:run 16s linear 0s infinite;
+					-moz-animation: run 16s linear 0s infinite;}
+			.top_cile:hover{     
+            	-webkit-animation-play-state:paused;  
+            	-moz-animation-play-state: paused;
+            	animation-play-state:paused;   
+        	}  
+        	@-webkit-keyframes run{ /*chorme*/    
+	            from{     
+	                -webkit-transform:rotate(0deg);
+	                   
+	            }     
+	            to{     
+	                -webkit-transform:rotate(360deg); 
+	                  
+	            }     
+	        }  
+	        @keyframes run{		/*firefox ie*/
+	        	from{
+	        		transform:rotate(0deg);  
+	        	}
+	        	to{
+	        		transform:rotate(360deg); 
+	        	}
+	        } 
+	        @-moz-keyframes run{
+	        	from{
+	        		-moz-transform:rotate(0deg);
+	        	}
+	        	to{
+	        		-moz-transform:rotate(360deg); 
+	        	}
+	        }
+	        .top_title{width:100%;height:auto;text-align:center;font-size:1.8rem;color:olivedrab;}
+	        .myaudio{width:100%;opacity: 0.9;}
+			.wrap{width:100%;height:auto;padding-top:1.8rem;text-align:center;color:#fff;font-size:1.4rem;line-height:1.8rem;margin-top:230px;}
+			.hr1{border:1px solid olivedrab;}
+			.hr2{border:1px solid lightblue;}
+			.bottomcontrol{width:100%;height:100px;position: fixed;bottom:0;left:0;z-index: 4;background-color:#333333;opacity: 0.8;}
+		</style>
+		<script src="../js/lib/zepto.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function(){
+				var tp = 230;								//滚动文字初始化位置
+				function scrolltext(){						//循环器
+					fortext = setInterval(function(){
+						tp = tp-0.05;
+						$(".wrap").css("margin-top",String(tp)+"px");
+						//$(window).trigger('scroll');		//触发页面滚动事件
+					},20)
+				}
+				scrolldelay = setTimeout(scrolltext,2000)	//页面加载完成2s开始滚动
+				
+				$(window).scroll(function(){				//当页面滚动到底部则停止滚动
+					var scrollTop = $(this).scrollTop();
+　　					var scrollHeight = $(document).height();
+　　					var windowHeight = $(this).height();
+					var cha = scrollTop+windowHeight;
+					
+					if(scrollTop+windowHeight>=scrollHeight){
+						clearInterval(fortext)
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top_cile"></div>
+			<div class="top_title">没有你陪伴真的好孤单</div>
+			<audio  controls="controls" autoplay="autoplay" loop="loop" class="myaudio">
+				<source src="../mp3/没有你陪伴我真的好孤单.wav"></source>
+			</audio>
+		</div>
+		<div class="wrap">
+			独白：又是一年,又是这一天<br>
+			让我想起了,我们再也回不去的从前<br>
+			<hr class="hr1">
+			城市的夜晚霓虹灯璀璨<br>
+			点亮了黑暗赶不走孤单<br>
+			午夜和白天不停的交换<br>
+			游走在街头一个人落单<br>
+			节日的狂欢情人的浪漫<br>
+			所有的快乐都和我无关<br>
+			无聊的工作让人很心烦<br>
+			我又想你了你人在哪端<br>
+			没有你陪伴我真的好孤单<br>
+			我的心好慌乱被恐惧填满<br>
+			没有你的日子我真的好茫然<br>
+			整天就像丢了灵魂一般<br>
+			没有你陪伴我真的好孤单<br>
+			我的心好慌乱不知怎么办<br>
+			没有你在身边真的好不习惯<br>
+			如果现在回头会不会太晚 <br>
+			<hr class="hr2">
+			节日的狂欢情人的浪漫<br>
+			所有的快乐都和我无关<br>
+			无聊的工作让人很心烦<br>
+			我又想你了你人在哪端<br>
+			没有你陪伴我真的好孤单<br>
+			我的心好慌乱被恐惧填满<br>
+			没有你的日子我真的好茫然<br>
+			整天就像丢了灵魂一般<br>
+			没有你陪伴我真的好孤单<br>
+			我的心好慌乱不知怎么办<br>
+			没有你在身边真的好不习惯<br>
+			如果现在回头会不会太晚 <br>
+		</div>
+		<div class="bottomcontrol"></div>
+	</body>
+</html>

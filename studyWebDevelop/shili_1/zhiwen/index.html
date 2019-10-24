@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>知问前段</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jqueryui.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <!-- 网页标题图标 -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/fav.ico">
+  <link rel="stylesheet" type="text/css" href="css/jqueryui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+<!-- background:#3333ff -->
+ <body>
+ <!-- *************************导航区开始********************************* -->
+	<div id="header">
+		<div class="header_main">
+			<h1>知问</h1>
+			<div class="header_search">
+				<input type="text" name="search" class="search">
+			</div>
+			<div class="header_button">
+				<input type="button" value="查询" id="search_button">
+			</div>
+			<div class="header_member">
+				<a href="#" id="reg_a">注册</a>|<a href="#" id="login_a">登录</a>
+			</div>
+		</div>
+	</div>
+<!-- ***************************导航区结束****************************** -->
+<!-- ****************************会员注册*************************************** -->
+	<form id="reg" title="会员注册" action="" >
+		<ol class="reg_error"></ol>
+		<p>
+			<label for="user">账号：</label>
+			<input type="text" name="user" class="text" id="user" >
+			<span class="star">*</span>
+		</p>
+
+		<p>
+			<label for="pass">密码：</label>
+			<input type="password" name="pass" class="text" id="pass">
+			<span class="star">*</span>
+		</p>
+
+		<p>
+			<label for="email">邮箱：</label>
+			<input type="text" name="email" class="text" id="email">
+			<span class="star">*</span>
+		</p>
+		<p>
+			<label>性别：</label>
+			<input type="radio" name="sex" value="male" id="male" checked="checked"><label for="male">男</label></input>
+			<input type="radio" name="sex" value="female" id="female"><label for="female">女</label></input>
+		</p>
+		<p>
+			<label for="date">生日：</label>
+			<input type="text" name="date" class="text" id="date" readonly="">
+			
+		</p>
+		
+	</form>
+<!-- ****************************会员登录****************************** -->
+	<div id="login" title="会员登录">
+		登录表单区
+	</div>
+	
+ </body>
+</html>

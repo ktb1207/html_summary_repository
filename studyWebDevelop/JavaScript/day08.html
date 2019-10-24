@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>生成随机数 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//使用for循环获取多个随机数
+	for(var i=0;i<5;i++){
+		var nNumber1=Math.random();					//生成0到1随机数
+		document.write("<h3>生成的第"+(i+1)+"随机数为："+nNumber1);
+		var nNumber2=nNumber1*100;                  //生成0到100的随机数
+		var nNumber3=Math.floor(nNumber2);			//生成0到100整数的随机数
+		document.write("<h3>生成的第"+(i+1)+"随机整数位："+nNumber3);
+	}
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

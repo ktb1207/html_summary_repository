@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>层叠选择器</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" src="jquery-1.12.0.js"></script>
+  <script type="text/javascript" src="jq5.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		//后代选择器 空格
+		//基准元素 层叠符号 目标元素 ul:first>li   
+		//
+		//选择第一个ul下面的所有li
+		//$("ul:first li").css("border","1px solid red");
+
+		//子代选择器 >
+		//只获取直接隶属于第一个ul的li子节点
+		//$("ul:first>li").css("border","1px solid red");
+
+		//相邻选择器 + 平级
+		//获取基准元素平级的后面一个节点
+		//获取from表单中第二个div之后的相邻节点一个
+		//$("form>div:eq(1)+*").css("border","1px solid red");
+
+		//获取之后的兄弟节点 ~ 平级 之后所有的兄弟节点
+		//获取form表单中第二个div之后的所有兄弟节点
+		$("form>div:eq(1)~*").css("border","1px solid red");
+
+	});
+  </script>
+ </head>
+
+ <body>
+	<div id="astyle">
+		<p>爱上你是我的错</p>
+		<p>爱上了别人的人</p>
+		<p>一万个理由</p>
+		<p>不要再说对不起</p>
+	</div>
+	<div id="bstyle">
+		<a href="#">百度</a>
+		<a href="#">新浪</a>
+		<a href="#">智联招聘</a>
+		<a href="#">腾讯网</a>
+		<a href="#">51前程无忧</a>
+	</div>
+	<ul>
+		<li>星期一</li>
+		<li>星期二</li>
+		<li>星期三</li>
+		<li>星期四</li>
+		<ul>
+			<li>星期五</li>
+			<li>星期六</li>
+			<li>星期日</li>
+		</ul>
+		<li>星期表</li>
+	</ul>
+	<ul>
+		<li>春天</li>
+		<li>夏天</li>
+		<li>秋天</li>
+		<li>冬天</li>
+	</ul>
+	<form name="form1" id="cstyle">
+		<div id="aa">
+			名字：<input type="text" value="name"> <br>
+			密码：<input type="text" value="pass"> <br>
+		</div>
+		<div>
+			<ol>
+				<li>春天</li>
+				<li>夏天</li>
+				<li>秋天</li>
+				<li>冬天</li>
+			</ol>
+		</div>
+		<form>
+			<input type="button" value="确定"> <br>
+			<input type="button" value="取消">
+		</form>
+		
+	</form>
+ </body>
+</html>

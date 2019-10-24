@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <style type="text/css">
+        .content{width:960px;height:auto;margin:0 auto;background-color: #d6e9c6;}
+        .study-up{margin-top:24px;padding:0 24px;}
+        .p-title{background-color: #333333;color:#ffffff;font-size:18px;}
+        .show-msg{margin-top:12px;margin-bottom:12px;}
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>正则表达式学习</h2>
+        <div class="study-up">
+            <p class="p-title">1.正则表达式命名：</p>
+            <div class="show-msg">
+                <p>a.普通创建：var reg = new RegExp();</p>
+                <p>b.字面量创建：var reg = //; </p>
+            </div>
+        </div>
+        <div class="study-up">
+            <p class="p-title">2.只能输入数字和英文：</p>
+            <div class="show-msg">
+                <input onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" ID="Text1" NAME="Text1">
+            </div>
+        </div>
+        <div class="study-up">
+            <p class="p-title">2.只能输入数字：</p>
+            <div class="show-msg">
+                <input onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" ID="Text2" NAME="Text2">
+            </div>
+        </div>
+        <div class="study-up">
+            <p class="p-title">3.只能输入汉字的：</p>
+            <div class="show-msg">
+                <input onkeyup="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\u4E00-\u9FA5]/g,''))" ID="Text4" NAME="Text4">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    /*
+    * 正则表达式学习
+    *参考链接：http://www.jb51.net/article/72044.htm
+    * */
+    //1.创建正则表达式
+
+    var reg = new RegExp('a');      //普通对象方法
+    var exp = /a/;                  //正则表达式字面量方法
+
+    //2.正则表达式格式语法
+    /*
+    * RegExp构造函数第一个参数为正则表达式的文本内容,而第一个参数则为可选项标志.标志可以组合使用
+    *•g（全文查找）
+     •i（忽略大小写）
+     •m（多行查找）
+    * */
+    var ongreg = new RegExp('abcdef','ig');
+    var oneexp = /abcdef/ig;
+    console.log(ongreg);
+    console.log(oneexp);
+
+    //3.正则表达式对象方法
+    /*
+    * A.test();
+    * 语法：RegExpObject.test(string)
+    * string，必须是字符串，如果字符串 string 中含有与 RegExpObject 匹配的文本，则返回 true，否则返回 false；
+    *
+    * B.exec();
+    * 语法：RegExpObject.exec(string)
+    * string,必须是字符串， 返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。
+    * */
+
+    var a_string = 'Welcome To My study well WLL';
+    var tworeg = /wel/i;
+    var twoexp = /wel/gi;
+    console.log(tworeg.test(a_string));
+    console.log(tworeg.exec(a_string));
+    console.log(twoexp.exec(a_string));
+
+    //4.String对象一些和正则表达式相关的方法
+    /*
+    * A.search()
+    * 语法：stringObject.search(regexp)；
+    * 参数regexp：可以是字符串也可以说RegExp对象，返回stringObject 中第一个与 regexp 相匹配的子串的起始位置。如果没有找到任何匹配的子串，则返回 -1。
+    *  search() 方法不执行全局匹配，它将忽略标志 g。它同时忽略 regexp 的 lastIndex 属性，并且总是从字符串的开始进行检索
+    * */
+    var b_string = 'Nice to meet you!';
+    var sedreg = /To/i;
+    var sedexp = 'ee';
+    console.log(b_string.search(sedreg));
+    console.log(b_string.search(sedexp));
+
+    /*
+    * B.match()
+    * 语法：stringObject.match(regexp)：
+    * 参数regexp：可以是字符串也可以是RegExp对象，返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。
+    * match()有全局和非全局模式之分
+    * */
+    var c_string = 'my name is tom,shi is luci,hi is jim';
+    var forreg = /is/gi;
+    var forexp = /is/i;
+    var forstr = 'is';
+    console.log(c_string.match(forreg));
+    console.log(c_string.match(forexp));
+    console.log(c_string.match(forstr));
+
+    /*
+    * C. replace()
+    * 语法：stringObject.replace(regexp/substr,replacement)
+    * 参数：regexp/substr：字符串或者正则对象，replacement：一个字符串或者函数。
+    * 返回值：一个新的字符串，是用 replacement 替换了 regexp 的第一次匹配或所有匹配之后得到的。
+    * */
+    var d_string = '当我孤独的时候还可以抱着你，那该有多甜蜜，当我寂寞的时候就这样想着你，那该有多幸运！';
+    var fivreg = /当/g;
+    var fivexp = /当/;
+    var fivstr = '当';
+    function transfrom(){
+        return "wozou";
+    }
+    console.log(d_string.replace(fivreg,'你'));
+    console.log(d_string.replace(fivexp,'你'));
+    console.log(d_string.replace(fivstr,'ni'));
+    console.log(d_string.replace(fivreg,transfrom()));
+
+    /*
+    * D. split()
+    * 语法： stringObject.split(separator,howmany)
+    * 参数： separator：字符串或正则表达式，howmany:可选。该参数可指定返回的数组的最大长度
+    * 返回值：一个字符串数组
+    * 如果把空字符串 ("") 用作 separator，那么 stringObject 中的每个字符之间都会被分割。
+    * String.split() 执行的操作与 Array.join 执行的操作是相反的。
+    * */
+
+    //5.正则表达式特殊字符
+    /*
+    * A.^
+    * 说明：脱字符(^)代表字符开始位置
+    * */
+    var fo_str = 'abcdefg123456';
+    var fo_reg = /^cd/gi;
+    var fo_exp = /cd/gi;
+    console.log(fo_reg.test(fo_str));
+    console.log(fo_exp.test(fo_str));
+
+    /*
+    * B.$
+    * 说明：$表示字符结束位置
+    * */
+    var ft_str = 'hi3';
+    var ft_str_a = 'ghimysdsdjk123a';
+    var ft_reg = /^hi3$/;
+    console.log(ft_reg.test(ft_str));
+    console.log(ft_reg.test(ft_str_a));
+
+    /*
+    *C.* + ？
+    * 说明：它们分别表示“没有或更多”，“一次或更多”还有“没有或一次”。
+    * "ab*"：表示一个字符串有一个a后面跟着零个或若干个b。（"a", "ab", "abbb",……)
+    *"ab+"：表示一个字符串有一个a后面跟着至少一个b或者更多；
+    * "ab?"：表示一个字符串有一个a后面跟着零个或者一个b；
+    * "a?b+$"：表示在字符串的末尾有零个或一个a跟着一个或几个b。
+    *
+    * 也可以使用范围，用大括号括起，用以表示重复次数的范围。
+    * "ab{2}"：表示一个字符串有一个a跟着2个b（"abb"）；
+    * "ab{2,}"：表示一个字符串有一个a跟着至少2个b；
+    * "ab{3,5}"：表示一个字符串有一个a跟着3到5个b。
+    * ***********必须指定范围的下限（如："{0,2}"而不是"{,2}"）。
+    * '*'，'+'和'?'相当于"{0,}"，"{1,}"和"{0,1}"。
+    * */
+
+    /*
+    * D.|
+    * 说明：|表示“或”操作
+    *"hi¦hello"：表示一个字符串里有"hi"或者"hello"；
+    *"(a¦b)*c"：表示一串"a""b"混合的字符串后面跟一个"c"；
+    * */
+
+    /*
+    * E. .
+    * 说明：'.',表示任何字符
+    * "a.[0-9]"：表示一个字符串有一个"a"后面跟着一个任意字符和一个数字；
+    * */
+
+    /*
+    * F.[]
+    * 说明：方括号表示某些字符允许在一个字符串中的某一特定位置出现：
+    * "[abc]"：表示一个字符串有一个"a"或"b"或"c"（相当于"a¦b|c"）；
+    * "[a-d]"：表示一个字符串包含小写的'a'到'd'中的一个（相当于"a¦b¦c¦d"或者"[abcd]"）；
+    * "^[a-zA-Z]"：表示一个以字母开头的字符串；
+    * *****************************************************************************
+    * 可以在方括号里用'^'表示不希望出现的字符，'^'应在方括号里的第一位。
+    * "%[^a-zA-Z]%"表示两个百分号中不应该出现字母
+    * *******************************************
+    * 为了逐字表达，你必须在"^.$()¦*+?{\"这些字符前加上转移字符'\'。
+    * 请注意在方括号中，不需要转义字符。
+    * */
+
+    /*
+    * G.{}
+    * 说明：{},表示匹配次数；
+    * {n} 精确匹配n次;
+    * {n,} 匹配n次以上;
+    * {n,m} 匹配n-m次,
+    * 例：只能输入5-20个以字母开头、可带数字、“_”、“.”的字串
+    * 正则表达式：/^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/
+    * ^[a-zA-Z]{1} 表示第一个字符要求是字母。
+    * ([a-zA-Z0-9]|[._]){4,19} 表示从第二位开始（因为它紧跟在上个表达式后面）的一个长度为4到9位的字符串，它要求是由大小写字母、数字或者特殊字符集[._]组成。
+    *
+    * /^ 和 $/成对使用应该是表示要求整个字符串完全匹配定义的规则，而不是只匹配字符串中的一个子串。
+    * */
+
+    /*
+    * H.()
+     * 说明：()表示分组，将几个项目分为一个单元
+     * 例子：匹配电话号码
+     * 正则表达式："(d+-)?(d{4}-?d{7}|d{3}-?d{8}|^d{7,8})(-d+)?"
+    * */
+
+    /*
+    * K.\w
+    * 说明：用于匹配字母，数字或下划线字符 ，相当于 [a-zA-Z0-9_]
+    * 例子：校验密码：只能输入6-20个字母、数字、下划线
+    * 正则：/^(\w){6,20}&/
+    * */
+
+    /*
+    * L.\W
+    * 说明：任何非单字字符,等价于[^a-zA-Z0-9]
+    *
+    * */
+
+    /*
+    * M.\d
+    * 说明：任何数字,等价于[0-9]
+    *
+    * */
+
+    /*
+    * N.\D
+    * 说明：除了数字之外的任何字符,等价于[^0-9]
+    *
+    * */
+
+    var tinktest = /^(\w){6,12}$/;
+    var tinkstr = 'a123123456_';
+    console.log(tinktest.test(tinkstr));
+    //多行匹配，去掉换行符
+    var bookReg = /^(-){1,5}(BEGIN CERTIFICATE){1}(.+)(END CERTIFICATE)(-){1,5}$/gm;
+    console.log(bookReg);
+    var bookStr = "---BEGIN CERTIFICATE\n123\nEND CERTIFICATE-----";
+    console.log(bookStr);
+    var astr_book = bookStr.replace(/[\r\n]/g, "");
+    console.log(astr_book);
+    console.log(bookReg.test(astr_book));
+</script>
+</html>

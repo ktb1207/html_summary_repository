@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>查看地图</title>
+		<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+		 <style type="text/css">
+        html
+        {
+            height: 100%;
+        }
+        body
+        {
+            height: 50%;
+            margin: 0px;
+            padding: 0px;
+        }
+        #allmap
+        {
+            width:600px;
+            height: 500px;
+        }
+    </style>
+		<script type="text/javascript"  src="http://api.map.baidu.com/api?v=2.0&ak=QLlZiSoqvoyluejuQiPxtzng"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+		<script src="../js/lib/zepto.js"></script>
+	</head>
+	<body>
+		
+		
+		<!--<div style="margin:0;padding-top:2px;background-color:#33beff;height:70px;width:160px;box-sizing:border-box">
+			<div style="margin:0 0 4px 0;padding:0 10px;height:20px;width:140px;">
+				<p style="color:#fff;font-size:13px;margin:0;padding:0;height:20px;line-height:20px;float:left;">万达广场</p>
+				<a style="border:0;color:#fff;text-decoration:none;width:20px;height:20px;display:block;float:right" href="#">
+					<img src="../images/wx_map_jump.png" width="20px" height="20px">	
+				</a>	
+			</div>
+			<div style="margin:0 0 2px 0;padding:0 10px;height:15px;width:140px;">
+				<img src="../images/wx_map_machine.png" height="16px" width="10px" style="display:block;float:left;">
+				<p style="color:#fff;font-size:2px;margin:0 0 0 6px;padding:0;float:left;">洗衣机:1台</p>
+				<img src="../images/wx_map_machine.png" height="16px" width="10px" style="display:block;float:left;margin:0 0 0 22px">
+				<p style="color:#fff;font-size:4px;margin:0 0 0 6px;float:left">空闲</p>
+			</div>
+			<div style="margin:0;padding:0 10px;height:15px;width:140px;">
+				<img src='../images/wx_map_position.png' height='16px' width='10px' style="display:block;float:left">
+				<p style="color:#fff;font-size:2px;margin:0 0 0 6px;padding:0;float:left;">当前距离:1426米</p>	
+			</div>
+			<div style="margin:0;padding:0;height:4px;width:180px;"></div>
+		<div>-->
+			
+		<div id="allmap"> </div>	
+			
+	</body>
+	<script type="text/javascript">
+		
+		var map = new BMap.Map("allmap");  							//创建地图实例
+		var point = new BMap.Point(116.466, 39.909);				//创建中心点坐标
+		map.centerAndZoom(point,15);								//地图初始化大小级别
+		
+    	//添加缩放工具
+		var bottom_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type:BMAP_NAVIGATION_CONTROL_ZOOM});
+		map.addControl(bottom_right_navigation);
+    	
+    	
+    	var content = '<div style="margin-top:-35px;margin-left:-5px;position:absolute;z-index:20000;padding-top:2px;background-color:#33beff;height:70px;width:250px;box-sizing:border-box">469782135</div>';
+    	var searchInfoWindow = null;
+    	
+		searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+			title  : "",      //标题
+			width  : -20,             //宽度
+			height : 32,              //高度
+			panel  : "panel",         //检索结果面板
+			enableAutoPan : true,     //自动平移
+			searchTypes   :[
+				
+			]
+		});
+		
+		
+		
+		
+		var markergg = new BMap.Marker(point);						//创建点
+    	markergg.enableDragging(); //marker可拖拽
+    	markergg.addEventListener("click", function(e){
+    		var p = markergg.getPosition();  						//获取marker的位置
+			//alert("markergg的位置是" + p.lng + "," + p.lat);   
+	    	searchInfoWindow.open(new BMap.Point(116.466, 39.909));
+    	})
+    	map.addOverlay(markergg); 									//将点添加到地图
+	</script>
+</html>

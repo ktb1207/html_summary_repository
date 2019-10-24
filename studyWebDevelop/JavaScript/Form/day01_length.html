@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 表单属性length </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <!--
+  <script language="javascript" type="text/javascript">
+	var nNumber1=document.forms.length;
+	document.write("<h3>文档中表单的数量为："+nNumber1);
+	var nNumber2=document.myForm.length;
+	document.write("<h3>表单myForm里面的表单元素数量为："+nNumber2);
+	var nNumber3=document.myForm.elements.length;
+	document.write("<h3>使用属性length获得myForm表单的元素数量为："+nNumber3);
+  </script>
+  -->
+ </head>
+
+ <body>
+	<h1>通过表单属性length获得表单数量和表单元素数量</h1>
+	<form action="" method="post" name="myForm">
+		<input type="text" name="text1" value="第一个文本框">
+		<input type="text" name="text2" value="第二个文本框">
+		<input type="text" name="text3" value="第三个文本框">
+		<input type="text" name="text4" value="第四个文本框">
+	</form>
+	<script language="javascript" type="text/javascript">
+		var nNumber1=document.forms.length;
+		document.write("<h3>文档中表单的数量为："+nNumber1);
+		var nNumber2=document.myForm.length;
+		document.write("<h3>表单myForm里面的表单元素数量为："+nNumber2);
+		var nNumber3=document.myForm.elements.length;
+		document.write("<h3>使用属性length获得myForm表单的元素数量为："+nNumber3);
+    </script>
+ </body>
+</html>

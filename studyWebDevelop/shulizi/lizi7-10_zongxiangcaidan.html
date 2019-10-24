@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 纵向列表导航菜单 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+  *{margin:0;                                      /*统一定义页面外边距、内边距*/
+    padding:0;
+	}
+  body{margin:0;
+       padding:0;
+	                    
+	   }
+  .main{width:990px;                               /*主div容器*/
+        height:auto;
+		margin:0 auto;
+		background:#ff9900;
+		}
+  .top{width:300px;                                /*标题div容器*/
+       height:60px;
+	   
+	   font-family:黑体;
+	   font-size:32px;
+	   font-weight:bold;
+	   font-style:oblique; 
+	   text-align:center;
+	   line-height:60px;
+	   }
+  #nav{width:300px;                               /*导航列表div*/
+       font-family:Arial;
+	   font-size:28px;
+	   background:#ff6699;
+
+	   }
+  #nav ul{list-style:none;                        /*不显示项目符号*/
+          }
+  #nav li{border-bottom:1px solid #ed9f9f;        /*设置列表项底部下划线*/
+         }
+  #nav li a{display:block;
+            text-decoration:none;
+			padding:5px 5px 5px 0.5em;
+			border-left:12px solid #711515;
+			border-right:1px solid #711515;
+			}
+  #nav li a:link,#nav li a:visited{                       /*未访问过的链接样式*/
+                                   background:#c11136;    /*控制背景颜色*/
+                                   color:#fff;            /*控制字体演示*/
+								   }
+  #nav li a:hover{
+                  background:#990020;
+				  color:#ff0;
+				  }
+  
+       
+  </style>
+ </head>
+
+ <body>
+   <div class="main">
+     <div class="top">
+	   兴宇书城
+	 </div>                                         <!-- top -->
+     <div id="nav">
+       <ul>
+         <li><a href="#">首页</a></li>
+	     <li><a href="#">关于</a></li>
+	     <li><a href="#">图书</a></li>
+	     <li><a href="#">特别推荐</a></li>
+	     <li><a href="#">会员登录</a></li>
+	     <li><a href="#">每周更新</a></li>
+	     <li><a href="#">最红星期五</a></li>
+	     <li><a href="#">参与互动</a></li>
+       </ul>
+     </div>                                            <!-- nav -->
+   
+   </div>                                             <!-- main -->
+   
+ </body>
+</html>

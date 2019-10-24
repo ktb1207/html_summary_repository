@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> javascript控制表单from </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//定义一个函数，实现检测用户名是否为空
+	function checkName()
+	{
+		var str=form1.userName.value;
+		if(str==""){						//	判断用户名是否为空
+			alert("用户名不能为空");       //   alert弹出窗口信息
+        }else{
+			alert("用户名可以注册")
+		}
+	}
+ </script>
+ </head>
+
+ <body>
+ <!-- 定义表单name="form1"方便函数调用 -->
+  <form name="form1" method="post" action=""> 
+	请输入姓名：
+	<input type="text" name="userName" id="userName" size="30">
+	<br>
+	单击按钮检测用户名的合法性：
+	<input type="button" value="检测" onclick="checkName()">
+	<!-- onclick鼠标事件 -->
+  </form>
+ </body>
+</html>

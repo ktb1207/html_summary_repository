@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			var a = location.search || "?",
+				    b= a.split("?")[1].split("&"),
+				    param = {};
+				
+				for(var i = 0;i < b.length; i++){
+				    param[b[i].split("=")[0]] = decodeURI(b[i].split("=")[1]);
+				}
+ 
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

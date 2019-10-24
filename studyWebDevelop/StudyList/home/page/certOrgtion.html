@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>组织机构认证-葫芦藤</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<style>
+	
+	.upload-list .upload_action .fileImage {opacity: 0;position: absolute;left: 0;top: 0;width: 100%;height:100%;}
+	.s_dl dl input[type=text]{font-size: 0.62rem;}
+</style>
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<!--<script type="text/javascript" src="../js/lib/jquery.mobile-1.4.5.min.js"></script>-->
+<!--<script type="text/javascript" src="../js/util/iscroll.js"></script>-->
+<script type="text/javascript" src="../js/widget/uploadFile.js"></script>
+<script type="text/javascript" src="../js/util/url.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/util/pic.js"></script>
+<script type="text/javascript" src="../js/custom/certOrgtion.js"></script>
+
+
+</head>
+<body>
+<!-- header start-->
+
+<!-- header end-->
+<!-- con start-->
+<div class="s_report">
+	<!-- 收款人信息 start-->
+	<div class="s_dl s_dl2">
+		<dl>
+			<dt class="lef5">机构名称：</dt>
+			<dd class="mid">
+				<input  id="txt_orgName" data-role="none" type="text" placeholder="请输入机构名称" />
+			</dd>
+		</dl>
+		<dl>
+			<dt class="lef5">联系人：</dt>
+			<dd class="mid">
+				<input id="txt_contactPerson" data-role="none" type="text" placeholder="请输入联系人" />
+			</dd>
+		</dl>
+		<dl>
+			<dt class="lef5">联系电话：</dt>
+			<dd class="mid">
+				<input id="txt_contactTele" data-role="none" type="text" placeholder="请输入联系电话" />
+			</dd>
+		</dl>
+		<dl>
+			<dt class="lef5">联系地址：</dt>
+			<dd class="mid">
+				<input id="txt_contactAddr" data-role="none" type="text" placeholder="请输入联系地址" />
+			</dd>
+		</dl>
+		<dl>
+			<dt class="lef5">服务区域：</dt>
+			<dd class="mid">
+				<input id="txt_serviceArea" data-role="none" type="text" placeholder="请输入服务区域" />
+			</dd>
+		</dl>
+		<dl>
+			<dt class="lef5">公益方向：</dt>
+			<dd class="mid">
+				<input id="txt_serviceDirection" data-role="none" type="text" placeholder="请输入公益方向" />
+			</dd>
+		</dl>
+	</div>
+	<!-- 收款人信息 end-->
+	
+	
+	<!-- 组织机构认证照片 start-->
+	<div class="g_ch s_box">
+		<dl class="comdl comdl2">
+			<dt>组织机构认证照片</dt>
+		</dl>
+		<!-- 上传图片 start-->
+		<div class="s_upload">
+			<p class="zzjg">包含但不限于：基金会法人登记证、社会团体法人登记证、民办非企业单位
+登记证书、民办非企业单位登记证书、营业执照、组织机构代码证、税务登记证等。</p>
+	        <ul class="upload-list">
+	            <li class="upload_action">
+					<img src="../image/upload_1.png" width="100%" />
+					<input type="file" accept="image/jpg,image/jpeg,image/png,image/gif" class="fileImage" id="file_orgPhoto" name="">
+				</li>
+	        </ul>
+	        
+	    </div>
+	    <!-- 上传图片 end-->
+	</div>
+	<!-- 组织机构认证照片 end-->
+	<!-- 项目医疗 end-->
+</div>
+<!-- con end-->
+
+<!-- tip begin-->
+		<div id="tip_item" class="l_ban" hidden="true">
+			<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+		</div>
+<!-- tip end-->
+<!-- btn start-->
+<div class="s_bm">
+	<a id="btn_sbmVerify" class="btn">提交验证</a>
+</div>
+<!-- btn end-->
+
+</body>
+</html>

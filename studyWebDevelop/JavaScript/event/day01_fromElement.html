@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 鼠标操作对象 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	function myFunction1(){
+		document.myForm.text1.value=event.fromElement.type;
+	}
+	function myFunction2(){
+		document.myForm.text2.value=event.toElement.type;
+	}
+  </script>
+ </head>
+
+ <body>
+	<h2>鼠标操作对象formElement属性和toElement属性</h2>
+	<form name="myForm" action="" method="post">
+		<input type="text" name="text1" > 
+		<input type="text" name="text2" >
+		<input type="button" value="点击" onmouseover="myFunction1()" onmouseout="myFunction2()">
+	</form>
+ </body>
+</html>

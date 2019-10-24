@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Date对象的返回值 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	//创建一个Date对象
+	var myDate=new Date();
+	//显示本地当前时间
+	document.write("<h3>本地当前时间为："+myDate);
+    document.write("<h3>创建的Date对象数据类型为："+typeof(myDate));
+	//Date对象的返回值
+	var sString1=myDate.toString();				//返回Date对象字符串
+    document.write("<h3>返回Date对象字符串："+sString1);
+	document.write("<h3>返回Date对象的数据类型为："+typeof(sString1));
+	var sString2=myDate.toLocaleString();		//返回Date对象日期和时间进行格式转换后的字符串
+    document.write("<h3>返回Date对象格式转换的字符串："+sString2);
+	document.write("<h3>返回Date对象的数据类型为："+typeof(sString2));
+	//获取本地当前时间的毫秒值
+	var sString3=Date.parse(myDate);			//获取本地当前时间的毫秒值
+	document.write("<h3>本地当前时间转换的毫秒值为："+sString3);
+	
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

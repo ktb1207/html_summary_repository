@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>举报</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+	div.s_dl.s_dl2{border-top: 1px solid #808080;}
+	input#v_rep_con_way{border:none;}
+	
+</style>
+<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js"></script>
+<!--<script type="text/javascript" src="../js/custom/register.js"></script>-->
+<script type="text/javascript" src="../js/util/url.js"></script>
+<script type="text/javascript" src="../js/util/scale.js"></script>
+<script type="text/javascript" src="../js/util/pic.js"></script>
+<script type="text/javascript" src="../js/util/utils.js"></script>
+<script type="text/javascript" src="../js/custom/report.js"></script>
+
+</head>
+<body>
+<!-- header start-->
+
+<!-- header end-->
+<!-- con start-->
+<div class="s_report">
+	<p class="s_r_tip">葫芦藤对您的个人信息和举报内容进行保密</p>
+	<!-- 举报项目 start-->
+	<h3 class="s_qtit">举报项目</h3>
+	<dl class="s_gz">
+		<dt>			
+			<img id="v_user_pic" src="../image/pro/pro3.jpg" width="100%" />
+		</dt>
+		<dd id="v_item_alias" class="mid">关注留守儿童</dd>
+	
+	</dl>
+	<!-- 举报项目 end-->
+	
+	<div class="s_box">
+		<div class="s_pt s_pt2">
+			<textarea id="s_pt" data-role="none" placeholder="举报项目理由"></textarea>
+		</div>
+		<!-- 上传图片 start-->
+	    <!-- 上传图片 end-->
+	    <div class="s_dl s_dl2">
+			
+			<dl>
+				<dt  class="lef4">举报人联系方式</dt>
+				<dd class="mid">
+					<input id="v_rep_con_way" data-role="none" placeholder="请输入您的手机号" />
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+</div>
+<!-- con end-->
+
+<!-- tip begin-->
+		<div id="tip_item" class="l_ban" hidden="true">
+			<h2 id="tip_item_say" class="l_tit"><i class="bd"></i>提示内容</h2>
+		</div>
+<!-- tip end-->
+
+<!-- btn start-->
+<div  id="do_report" class="s_bm">
+	<a class="btn">确认举报</a>
+</div>
+<!-- btn end-->
+</body>
+</html>

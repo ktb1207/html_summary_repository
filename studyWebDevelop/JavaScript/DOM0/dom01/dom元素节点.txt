@@ -1,0 +1,30 @@
+getElementById()
+		var box=document.getElementById('box');
+		/*************元素节点****************************/
+		//alert(box);           //objectHTMLDivElement
+		//alert(box.tagName);   //DIV
+		//alert(box.innerHTML);   //获取当前元素里面的内容
+		/*************元素节点属性*************************/
+		//alert(box.id);			//box
+		//alert(box.style);         //CSS样式
+		//box.style="color:blue;";	//火狐支持；IE不支持
+		//box.innerHTML="玩转JS";		//元素节点属性赋值操作
+getElementsByTagName（）
+	var li=document.getElementsByTagName('li');
+	//alert(li);				//[object HTMLCollection]
+	//alert(li.length);			//4
+	//alert(li[0].innerHTML);		//获取元素名li数组里面第一个标签li里面的内容
+	//li[0].innerHTML="爱人";		//	赋值操作
+	var body=document.getElementsByTagName('body')[0];
+	alert(body.tagName);		//BODY
+	var body=document.getElementsByTagName('*');	//*通配符，获取所有元素
+	alert(body.length);		//BODY
+getAttribute（）   获取元素某个属性值
+	var box=document.getElementById('box');
+	alert(box.getAttribute('style'));		//color:red
+setAttribute（）   设置属性值操作，需要两个参数 1属性名字 2属性值
+	var box=document.getElementById('box');
+	box.setAttribute('style','color:blue');  //属性设置操作
+removeAttribute（）移除属性操作
+	var box=document.getElementById('box');
+	box.removeAttribute('style');	//移除属性

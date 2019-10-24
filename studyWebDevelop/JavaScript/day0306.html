@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 使用函数调用函数 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+    //定义第一个函数
+	function myfirstFunction()
+	{
+		document.write("<h1>第一个函数第一行");
+		mysecondFunction();
+		document.write("<h4>第一个函数第二行");
+	}
+	function mysecondFunction()
+	{
+	    document.write("<h2>第二个函数第一行");
+		document.write("<h3>第二个函数第二行");
+	}
+  </script>
+ </head>
+
+ <body>
+    <h2>通过第一个函数调用第二个函数</h2>
+  <script language="javascript" type="text/javascript">
+    //调用第一个函数
+	myfirstFunction();
+  </script>
+ </body>
+</html>

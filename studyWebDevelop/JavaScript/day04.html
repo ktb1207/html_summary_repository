@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 函数参数调用 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+    //定义一个带有参数的函数
+	function myFunction(parameter)
+	{
+	  //使用switch条件结构语句判断数据类型
+	  switch(typeof(parameter))
+	  {
+	    case "string":
+		document.write("<h3>您输入参数的数据类型为字符串型");
+		break;
+		case "number":
+		document.write("<h3>您输入参数的数据类型为数值型");
+		break;
+		case "boolean":
+		document.write("<h3>您输入参数的数据类型为布尔型");
+		break;
+		default:
+		document.write("<h3>您输入的参数不是标准数据类型");
+		
+
+	  }
+	}
+  </script>
+ </head>
+
+ <body>
+   <h2>函数调用判断数据类型</h2>
+   <script language="javascript" type="text/javascript">
+     myFunction(true);
+	 myFunction(123456);
+	 myFunction("your");
+	 myFunction(null);
+
+   
+   </script>
+ </body>
+</html>

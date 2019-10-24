@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta content="telephone=no" name="format-detection" />
+		<title>附近点列表</title>
+		<link type="text/css" rel="stylesheet" href="../css/wx.css"/>
+		<script src="../js/lib/zepto.js"></script>
+		<script src="../js/lib/iscroll.js"></script>
+		<script src="../js/lib/jweixin-1.0.0.js"></script>
+		<script type="text/javascript"  src="http://api.map.baidu.com/api?v=2.0&ak=QLlZiSoqvoyluejuQiPxtzng"></script>
+		<script src="../js/lib/map-infowindow.js"></script>
+		<script src="../js/method/des.js"></script>
+		<script src="../js/method/base.js"></script>
+		<script src="../js/custorm/nearbyList.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--top strat-->
+			<div class="ne_top">
+				<i class="ne_tl" id="jump_back"></i>
+				<h1 class="ne_tittle">附近洗衣点</h1>
+				<span class="ne_tr" id="checkmap">地图</span>
+			</div>
+			<!--top end-->
+			<!-- conter start-->
+			
+			<div class="ne_conter wrapper" id="wrapper">
+				<div id="scroller" class="scroller">
+					<div class="scroller-pullDown" id="scroller-pullDown">
+           				<span id = "down-icon" class = "icon-double-angle-down pull-down-icon"></span>
+            			<span id = "pullDown-msg" class = "pull-down-msg">下拉刷新</span>
+        			</div>
+				
+					<ul id ="mac_list">
+						<!--
+						<li class="ne_free">
+						<div class="ne_place">
+							<p class="ne_placep1">7天酒店团结湖店<p>
+							<p class="ne_placep2">1台空闲<p>
+						</div>
+						<div class="ne_distance">1200米</div>
+						</li>
+						
+						<li class="ne_busy">
+						<div class="ne_place">
+							<p class="ne_placep1">联合大学机电学院男生宿舍楼</p>
+							<p class="ne_placep3">0台空闲</p>
+						</div>
+						<div class="ne_distance">88米</div>
+						</li>
+						-->
+					</ul>
+					
+					
+					<div class="scroller-pullUp" id="scroller-pullUp">
+            			<span id = "up-icon" class = "icon-double-angle-up pull-up-icon"></span>
+            			<span id = "pullUp-msg" class = "pull-up-msg">上拉刷新</span>
+       				</div>	
+					
+				</div>
+					
+			</div>
+			<!--conter end-->
+			
+			<!-- map start-->
+			<div class="ne_map" id="allmap">
+				
+			</div>
+			<!-- map end-->
+		</div>
+		
+		<!-- no data start-->
+			<div class="ne_nodata">您的附近暂无洗衣点</div>
+		<!--no data end-->
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

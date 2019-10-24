@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 经典三行两列布局样式 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+  *{margin:0px;padding:0px;}
+  body{font-family:微软雅黑;font-size:20px;}/*设置页面全局参数*/
+  div{font-size:30px;font-family:宋体}/*同意设置盒子模型样式*/
+  .zuiwai{margin:0 auto;width:900px;height:auto;}/*设定一个大容器*/
+  .header{height:50px;width:100%;margin-bottom:5px;background:#ff9900}/*头部区域*/
+  /*container的高度自适应，防止里面内容溢出，可根据放置的内容自动调整高度*/
+  .container{width:100%;margin-bottom:5px;background:#ff33cc;}
+  /*container高度自适应，要将其下面的DIV清除浮动*/
+  .mainbox{float:left;width:600px;height:100%;background:#99cc33;margin-right:5px;}
+  .sidebox{float:right;width:200px;height:100%;background:#33ff33;}
+  .footer{height:50px;width:100%;background:#cc3333;clear:both;}/*清除浮动*/
+  </style>
+
+ </head>
+
+ <body>
+ <div class="zuiwai">
+   <div class="header">这里是header区域</div>
+   <div class="container">
+      <div class="mainbox">
+	  <p>这里是主要内容</p>
+	  <p>这里是主要内容</p>
+	  <p>这里是主要内容</p>
+	  <p>这里是主要内容</p>
+	  <p>这里是主要内容</p>
+	  <p>这里是主要内容</p>
+	  <p>这里是主要内容</p>
+	  <p>这里是主要内容</p>
+	  </div>
+      <div class="sidebox">
+	  <p>这里是侧边栏</p>
+	  <p>这里是侧边栏</p>
+	  <p>这里是侧边栏</p>
+	  </div>
+   </div>
+   <div class="footer">这里是footer区域</div>
+ </div>
+ </body>
+</html>

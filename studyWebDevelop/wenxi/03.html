@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>数组排序 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="javascript" type="text/javascript">
+	var array1 = new Array('5','4','8','3','6','9','1','0');
+	document.write("原数组为："+array1+"<br>");
+	//使用sort()函数方法排序
+	var newarray1 = array1.sort();
+	document.write("使用sort函数排序的结果为："+newarray1+"<br>");
+	//数组升序排列
+	function des(a,b){
+		return a-b;
+	};
+	var newarray2 = array1.sort(des);
+	document.write("升序排列的结果为："+newarray2+"<br>");
+	//降序排列
+	function dxs(a,b){
+		return b-a
+	};
+	var newarray3 = array1.sort(dxs);
+	document.write("降序排列的结果为："+newarray3+"<br>");
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

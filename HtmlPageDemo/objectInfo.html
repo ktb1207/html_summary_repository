@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>object属性</title>
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				this.say = function(){
+					//alert('我的名字叫：'+name+',我的年龄是：'+age+'岁。');
+				}
+					
+			}
+			
+			Person.prototype.sex = 'male';
+			var tom = new Person('tom',23);
+			tom.say();
+			
+			var myClass = {
+				students:62,
+				positions:'中国',
+				age:3
+			};
+			/*
+			 * 对象属性总结：
+			 * */
+			
+			//1.constructor--保存着用于创建当前对象的函数
+			console.log(tom.constructor);
+			console.log(Person.constructor);
+			//2.hasOwnProperty--检查给定的属性在当前对象实例中，而不是在实例的原型中。
+			console.log(tom.hasOwnProperty("name"));
+			console.log(tom.hasOwnProperty("sex"));
+			//3.isPrototypeOf--用于检查传入的对象是否是当前对象的原型
+			console.log();
+			//4.toString()---返回对象的字符串表示
+			console.log(Person.toString());
+			//5.valueOf()--返回对象的字符串、数值、布尔值表示
+			console.log(Person.valueOf());
+			
+			//6.Object.getOwnPropertyNames()--返回对象的所有自身属性的属性名（包括不可枚举的属性）组成的数组，但不会获取原型链上的属性。
+			console.log(Object.getOwnPropertyNames(myClass));//["students", "positions", "age"]
+			
+			//7.Object.keys()--和getOwnPropertyNames方法类似，但是获取所有的可枚举的属性，返回一个数组
+			console.log(Object.keys(myClass));
+			
+			var brr = [1,2,5,3,2,1,4];
+			console.log(brr.toString());
+			
+			
+		</script>
+	</head>
+	<body>
+		详见console.log()信息
+	</body>
+</html>

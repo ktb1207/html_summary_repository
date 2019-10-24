@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>@media</title>
+		<style type="text/css">
+			@media screen and (min-width:1120px){
+				#wrap{
+					width:1100px;
+					height:600px;
+					margin:20px auto;
+					background:red;
+				}
+			}
+			@media screen and (max-width:1119px){
+				#wrap{
+					width:900px;
+					height:500px;
+					margin:50px auto;
+					background:blue;
+				}
+			}
+			@media screen and (max-width:920px){
+				#wrap{
+					width:600px;
+					height:400px;
+					margin:50px auto;
+					background:brown;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<p>使用media属性当浏览器宽度不同的时候，div背景颜色随机改变</p>
+		</div>
+	</body>
+</html>
